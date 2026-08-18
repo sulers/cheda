@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About – Acheda Zanzibar Tours</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ui-avatars.com/api/?name=AZ&background=1a5276&color=fff&size=32"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      /* =============================================
+                   ROOT & RESET (matching main site)
+                   ============================================= */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --blue-deep: #0a2a3a;
+        --blue-primary: #1a5276;
+        --blue-bright: #2a7a9a;
+        --blue-light: #eaf2f7;
+        --orange: #e67e22;
+        --orange-light: #f5cba7;
+        --orange-glow: rgba(230, 126, 34, 0.2);
+        --white: #ffffff;
+        --gray-50: #f8fafc;
+        --gray-100: #f1f4f8;
+        --gray-200: #e2e8f0;
+        --gray-500: #64748b;
+        --gray-700: #1e293b;
+        --shadow-sm: 0 2px 8px rgba(10, 42, 58, 0.06);
+        --shadow-md: 0 8px 30px rgba(10, 42, 58, 0.1);
+        --shadow-lg: 0 20px 60px rgba(10, 42, 58, 0.14);
+        --radius: 20px;
+        --radius-sm: 12px;
+        --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--gray-50);
+        color: var(--gray-700);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+
+      /* =============================================
+                   TYPOGRAPHY
+                   ============================================= */
+      .section-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--orange);
+        background: var(--orange-glow);
+        padding: 4px 20px;
+        border-radius: 40px;
+        margin-bottom: 12px;
+        border: 1px solid rgba(230, 126, 34, 0.15);
+      }
+      .section-label i {
+        font-size: 0.6rem;
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        font-weight: 700;
+        color: var(--blue-deep);
+        line-height: 1.15;
+        margin-bottom: 6px;
+      }
+      .section-title .highlight {
+        color: var(--orange);
+      }
+
+      .section-subtitle {
+        font-size: 1.05rem;
+        color: var(--gray-500);
+        max-width: 640px;
+        font-weight: 400;
+        margin-bottom: 32px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 34px;
+        border-radius: 60px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+        letter-spacing: 0.2px;
+      }
+
+      .btn-primary {
+        background: var(--blue-primary);
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(26, 82, 118, 0.25);
+      }
+      .btn-primary:hover {
+        background: var(--blue-deep);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(26, 82, 118, 0.35);
+      }
+
+      .btn-orange {
+        background: var(--orange);
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(230, 126, 34, 0.3);
+      }
+      .btn-orange:hover {
+        background: #d35400;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(230, 126, 34, 0.4);
+      }
+
+      .btn-outline-light {
+        background: transparent;
+        color: #fff;
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+      }
+      .btn-outline-light:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-3px);
+      }
+
+      .btn-whatsapp {
+        background: #25d366;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+      }
+      .btn-whatsapp:hover {
+        background: #1ebe5c;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
+      }
+
+      /* =============================================
+                   NAVIGATION
+                   ============================================= */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 16px 0;
+        transition: var(--transition);
+        background: transparent;
+      }
+      .navbar.scrolled {
+        background: rgba(10, 42, 58, 0.94);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.12);
+        padding: 10px 0;
+      }
+
+      .nav-container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .nav-logo .logo-accent {
+        color: var(--orange);
+        font-style: italic;
+      }
+      .nav-logo-img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid var(--orange);
+        background: var(--blue-primary);
+        object-fit: cover;
+      }
+
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #fff;
+        cursor: pointer;
+        padding: 4px 8px;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+      }
+      .nav-link {
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        transition: var(--transition);
+        position: relative;
+        letter-spacing: 0.3px;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: var(--orange);
+        transition: var(--transition);
+        border-radius: 4px;
+      }
+      .nav-link:hover {
+        color: #fff;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* =============================================
+                   PAGE HERO
+                   ============================================= */
+      .page-hero {
+        position: relative;
+        padding: 140px 0 72px;
+        background: var(--blue-deep);
+        text-align: center;
+        overflow: hidden;
+      }
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&h=400&fit=crop")
+          center/cover no-repeat;
+        opacity: 0.12;
+      }
+      .page-hero .container {
+        position: relative;
+        z-index: 2;
+      }
+      .page-hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.6rem, 5vw, 3.8rem);
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .page-hero h1 .highlight {
+        color: var(--orange);
+      }
+      .page-hero p {
+        font-size: 1.15rem;
+        color: rgba(255, 255, 255, 0.75);
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      /* =============================================
+                   SECTION SPACING
+                   ============================================= */
+      .section-spacing {
+        padding: 72px 0 80px;
+      }
+      .section-spacing-sm {
+        padding: 56px 0 64px;
+      }
+      .bg-white {
+        background: var(--white);
+      }
+      .bg-light {
+        background: var(--gray-50);
+      }
+      .bg-blue-deep {
+        background: var(--blue-deep);
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .bg-blue-deep .section-title {
+        color: #fff;
+      }
+      .bg-blue-deep .section-subtitle {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* =============================================
+                   ABOUT PAGE SPECIFIC
+                   ============================================= */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .about-grid .content h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        color: var(--blue-deep);
+        margin-bottom: 16px;
+      }
+      .about-grid .content h2 .highlight {
+        color: var(--orange);
+      }
+      .about-grid .content p {
+        color: var(--gray-500);
+        line-height: 1.8;
+        margin-bottom: 16px;
+      }
+      .about-grid .content ul {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0 20px;
+      }
+      .about-grid .content ul li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 8px 0;
+        color: var(--gray-700);
+        font-size: 0.95rem;
+      }
+      .about-grid .content ul li i {
+        color: var(--orange);
+        font-size: 1.1rem;
+        width: 22px;
+        margin-top: 3px;
+      }
+      .about-image {
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+      }
+      .about-image img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+      .about-image:hover img {
+        transform: scale(1.03);
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-top: 12px;
+      }
+      .stat-item {
+        text-align: center;
+        background: var(--white);
+        padding: 28px 20px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--gray-200);
+        transition: var(--transition);
+      }
+      .stat-item:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--orange);
+      }
+      .stat-item .stat-number {
+        font-family: "Playfair Display", serif;
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: var(--blue-primary);
+      }
+      .stat-item .stat-number .highlight {
+        color: var(--orange);
+      }
+      .stat-item .stat-label {
+        font-size: 0.9rem;
+        color: var(--gray-500);
+        margin-top: 4px;
+      }
+
+      /* =============================================
+                   TEAM / VALUES
+                   ============================================= */
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+        margin-top: 12px;
+      }
+      .value-card {
+        background: var(--white);
+        padding: 32px 24px;
+        border-radius: var(--radius);
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--gray-200);
+        transition: var(--transition);
+      }
+      .value-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--orange);
+      }
+      .value-card .value-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: var(--blue-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        font-size: 1.6rem;
+        color: var(--orange);
+        transition: var(--transition);
+      }
+      .value-card:hover .value-icon {
+        background: var(--blue-primary);
+        color: #fff;
+      }
+      .value-card h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.1rem;
+        color: var(--blue-deep);
+        margin-bottom: 6px;
+      }
+      .value-card p {
+        font-size: 0.9rem;
+        color: var(--gray-500);
+        line-height: 1.6;
+      }
+
+      /* =============================================
+                   FOOTER
+                   ============================================= */
+      .footer {
+        background: var(--blue-deep);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 56px 0 28px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.2fr;
+        gap: 44px;
+        margin-bottom: 40px;
+      }
+      .footer-brand .footer-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+      .footer-logo-img {
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        border: 2px solid var(--orange);
+        background: var(--blue-primary);
+        object-fit: cover;
+      }
+      .footer-brand p {
+        font-size: 0.92rem;
+        max-width: 300px;
+        line-height: 1.7;
+      }
+
+      .footer-links h4 {
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 14px;
+        font-size: 0.95rem;
+        letter-spacing: 0.3px;
+      }
+      .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .footer-links a {
+        font-size: 0.88rem;
+        transition: var(--transition);
+        opacity: 0.8;
+      }
+      .footer-links a:hover {
+        opacity: 1;
+        color: var(--orange);
+      }
+
+      .footer .contact-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 6px;
+      }
+      .footer .contact-socials a {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.5);
+        transition: var(--transition);
+        font-size: 1.1rem;
+      }
+      .footer .contact-socials a:hover {
+        background: var(--orange);
+        color: #fff;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding-top: 22px;
+        text-align: center;
+        font-size: 0.82rem;
+        opacity: 0.6;
+      }
+
+      /* =============================================
+                   STICKY WHATSAPP
+                   ============================================= */
+      .sticky-wa {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 9999;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        box-shadow: 0 6px 24px rgba(37, 211, 102, 0.35);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+      .sticky-wa:hover {
+        transform: scale(1.08);
+        box-shadow: 0 10px 36px rgba(37, 211, 102, 0.5);
+      }
+
+      /* =============================================
+                   RESPONSIVE
+                   ============================================= */
+      @media (max-width: 1024px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-image img {
+          height: 300px;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+        }
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-toggle {
+          display: block;
+        }
+        .nav-menu {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 280px;
+          height: 100vh;
+          background: var(--blue-deep);
+          flex-direction: column;
+          padding: 80px 32px 40px;
+          gap: 18px;
+          box-shadow: -8px 0 40px rgba(0, 0, 0, 0.25);
+          transition: 0.4s ease;
+          align-items: flex-start;
+        }
+        .nav-menu.open {
+          right: 0;
+        }
+        .nav-link {
+          color: rgba(255, 255, 255, 0.85) !important;
+          font-size: 1.05rem;
+        }
+        .nav-link::after {
+          background: var(--orange) !important;
+        }
+
+        .page-hero {
+          padding: 120px 0 48px;
+        }
+
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .about-image img {
+          height: 220px;
+        }
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+        .stat-item {
+          padding: 20px 16px;
+        }
+        .stat-item .stat-number {
+          font-size: 2rem;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .values-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .values-grid {
+          grid-template-columns: 1fr;
+        }
+        .stats-grid {
+          grid-template-columns: 1fr;
+        }
+        .sticky-wa {
+          width: 50px;
+          height: 50px;
+          font-size: 1.5rem;
+          bottom: 18px;
+          right: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img
+            src="https://ui-avatars.com/api/?name=AZ&background=1a5276&color=fff&size=40&rounded=true"
+            alt="Acheda Zanzibar Tours logo"
+            class="nav-logo-img"
+          />
+          <span>Acheda<span class="logo-accent">Zanzibar</span></span>
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html#packages-6" class="nav-link">Packages</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="gallery.html" class="nav-link">Moments</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="support.html" class="nav-link">Support</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>About <span class="highlight">Acheda Zanzibar</span></h1>
+        <p>
+          Your trusted local partner for authentic, unforgettable island
+          experiences
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT CONTENT ===== -->
+    <section class="section-spacing bg-white">
+      <div class="container">
+        <div class="about-grid">
+          <div class="content">
+            <div class="section-label">
+              <i class="fas fa-info-circle"></i> Who We Are
+            </div>
+            <h2>
+              Your Gateway to the <span class="highlight">Spice Island</span>
+            </h2>
+            <p>
+              <strong>Acheda Zanzibar Tours</strong> is a locally-owned tour
+              company with deep roots in the community. We were born from a
+              simple passion: to share the authentic beauty, culture, and warmth
+              of Zanzibar with travelers from around the world.
+            </p>
+            <p>
+              With years of experience and a team of expert local guides, we
+              craft personalized adventures that go beyond the typical tourist
+              trail. From the bustling markets of Stone Town to the pristine
+              sands of Paje Beach, we know the island inside out - and we love
+              every corner of it.
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span
+                  ><strong>Affordable & transparent</strong> – no hidden fees,
+                  just honest pricing</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span
+                  ><strong>Reliable & punctual</strong> – we value your time and
+                  comfort</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span
+                  ><strong>Locally rooted</strong> – our guides are born and
+                  raised in Zanzibar</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span
+                  ><strong>Sustainable travel</strong> – we support local
+                  communities and protect our environment</span
+                >
+              </li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary"
+              ><i class="fas fa-paper-plane"></i> Start Your Journey</a
+            >
+          </div>
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1542406775-5c7fea9b9d3b?w=800&h=600&fit=crop"
+              alt="Zanzibar local culture"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="section-spacing bg-light">
+      <div class="container">
+        <div class="section-label">
+          <i class="fas fa-chart-line"></i> By the Numbers
+        </div>
+        <h2 class="section-title">
+          Our Journey in <span class="highlight">Numbers</span>
+        </h2>
+        <p class="section-subtitle">
+          Real results from real travelers who trusted us with their Zanzibar
+          dreams
+        </p>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">20<span class="highlight">+</span></div>
+            <div class="stat-label">Happy Travelers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">98<span class="highlight">%</span></div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">12<span class="highlight">+</span></div>
+            <div class="stat-label">Months of Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4.9<span class="highlight">★</span></div>
+            <div class="stat-label">Average Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VALUES ===== -->
+    <section class="section-spacing bg-white">
+      <div class="container">
+        <div class="section-label"><i class="fas fa-heart"></i> Our Values</div>
+        <h2 class="section-title">
+          What Drives <span class="highlight">Us</span>
+        </h2>
+        <p class="section-subtitle">
+          The principles that guide everything we do
+        </p>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-handshake"></i></div>
+            <h4>Trust & Integrity</h4>
+            <p>
+              We believe in honest, transparent relationships with every
+              traveler. No surprises, no hidden fees.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-leaf"></i></div>
+            <h4>Sustainability</h4>
+            <p>
+              We protect Zanzibar's natural and cultural heritage through
+              responsible, eco-friendly practices.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-users"></i></div>
+            <h4>Community First</h4>
+            <p>
+              We employ local guides, support local businesses, and give back to
+              the communities we serve.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-star"></i></div>
+            <h4>Excellence</h4>
+            <p>
+              We go above and beyond to ensure every guest leaves with memories
+              that last a lifetime.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section-spacing bg-blue-deep" style="text-align: center">
+      <div class="container">
+        <h2 class="section-title" style="color: #fff">
+          Ready to Experience <span class="highlight">Zanzibar</span>?
+        </h2>
+        <p
+          class="section-subtitle"
+          style="margin: 0 auto 28px; color: rgba(255, 255, 255, 0.7)"
+        >
+          Let's craft your perfect island adventure - tailored to your pace,
+          interests, and dreams.
+        </p>
+        <a href="contact.html" class="btn btn-orange"
+          ><i class="fas fa-umbrella-beach"></i> Plan Your Trip</a
+        >
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <img
+                src="https://ui-avatars.com/api/?name=AZ&background=1a5276&color=fff&size=44&rounded=true"
+                alt="Acheda Zanzibar Tours logo"
+                class="footer-logo-img"
+              />
+              <span>Acheda<span class="logo-accent">Zanzibar</span></span>
+            </a>
+            <p>
+              Your gateway to the Spice Island. We craft unforgettable
+              experiences that blend culture, nature, and pure relaxation.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html#packages-6">6 Days Packages</a></li>
+              <li><a href="index.html#packages-3">3 Days Packages</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="support.html#faq">FAQ</a></li>
+              <li><a href="support.html#terms">Terms &amp; Conditions</a></li>
+              <li><a href="support.html#privacy">Privacy Policy</a></li>
+              <li>
+                <a href="support.html#cancellation">Cancellation Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Follow Us</h4>
+            <div class="contact-socials">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Acheda Zanzibar Tours. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== STICKY WHATSAPP ===== -->
+    <a
+      href="https://wa.me/255615311661?text=Hi%20Acheda%20Zanzibar%20Tours!%20I%20found%20your%20website%20and%20I'm%20interested."
+      target="_blank"
+      class="sticky-wa"
+      aria-label="WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- =============================================
+    JAVASCRIPT
+    ============================================= -->
+    <script>
+      // Navbar scroll
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 60);
+      });
+
+      // Mobile menu
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+      navToggle.addEventListener("click", () =>
+        navMenu.classList.toggle("open"),
+      );
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => navMenu.classList.remove("open"));
+      });
+    </script>
+  </body>
+</html>

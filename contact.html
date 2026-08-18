@@ -1,0 +1,1247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Book – Acheda Zanzibar Tours</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ui-avatars.com/api/?name=AZ&background=1a5276&color=fff&size=32"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      /* =============================================
+                   ROOT & RESET
+                   ============================================= */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --blue-deep: #0a2a3a;
+        --blue-primary: #1a5276;
+        --blue-bright: #2a7a9a;
+        --blue-light: #eaf2f7;
+        --orange: #e67e22;
+        --orange-light: #f5cba7;
+        --orange-glow: rgba(230, 126, 34, 0.2);
+        --white: #ffffff;
+        --gray-50: #f8fafc;
+        --gray-100: #f1f4f8;
+        --gray-200: #e2e8f0;
+        --gray-300: #cbd5e1;
+        --gray-500: #64748b;
+        --gray-700: #1e293b;
+        --shadow-sm: 0 2px 8px rgba(10, 42, 58, 0.06);
+        --shadow-md: 0 8px 30px rgba(10, 42, 58, 0.1);
+        --shadow-lg: 0 20px 60px rgba(10, 42, 58, 0.14);
+        --radius: 20px;
+        --radius-sm: 12px;
+        --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--gray-50);
+        color: var(--gray-700);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+
+      /* =============================================
+                   TYPOGRAPHY
+                   ============================================= */
+      .section-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--orange);
+        background: var(--orange-glow);
+        padding: 4px 20px;
+        border-radius: 40px;
+        margin-bottom: 12px;
+        border: 1px solid rgba(230, 126, 34, 0.15);
+      }
+      .section-label i {
+        font-size: 0.6rem;
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        font-weight: 700;
+        color: var(--blue-deep);
+        line-height: 1.15;
+        margin-bottom: 6px;
+      }
+      .section-title .highlight {
+        color: var(--orange);
+      }
+
+      .section-subtitle {
+        font-size: 1.05rem;
+        color: var(--gray-500);
+        max-width: 640px;
+        font-weight: 400;
+        margin-bottom: 32px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 34px;
+        border-radius: 60px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+        letter-spacing: 0.2px;
+      }
+
+      .btn-primary {
+        background: var(--blue-primary);
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(26, 82, 118, 0.25);
+      }
+      .btn-primary:hover {
+        background: var(--blue-deep);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(26, 82, 118, 0.35);
+      }
+
+      .btn-orange {
+        background: var(--orange);
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(230, 126, 34, 0.3);
+      }
+      .btn-orange:hover {
+        background: #d35400;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(230, 126, 34, 0.4);
+      }
+
+      .btn-outline-light {
+        background: transparent;
+        color: #fff;
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+      }
+      .btn-outline-light:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-3px);
+      }
+
+      .btn-whatsapp {
+        background: #25d366;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+      }
+      .btn-whatsapp:hover {
+        background: #1ebe5c;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
+      }
+
+      .btn-email {
+        background: #ea4335;
+        color: #fff;
+      }
+      .btn-email:hover {
+        background: #d33426;
+        transform: translateY(-3px);
+      }
+
+      .btn-sms {
+        background: #34b7f1;
+        color: #fff;
+      }
+      .btn-sms:hover {
+        background: #1da1e0;
+        transform: translateY(-3px);
+      }
+
+      /* =============================================
+                   NAVIGATION
+                   ============================================= */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 16px 0;
+        transition: var(--transition);
+        background: transparent;
+      }
+      .navbar.scrolled {
+        background: rgba(10, 42, 58, 0.94);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.12);
+        padding: 10px 0;
+      }
+
+      .nav-container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .nav-logo .logo-accent {
+        color: var(--orange);
+        font-style: italic;
+      }
+      .nav-logo-img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid var(--orange);
+        background: var(--blue-primary);
+        object-fit: cover;
+      }
+
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #fff;
+        cursor: pointer;
+        padding: 4px 8px;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+      }
+      .nav-link {
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        transition: var(--transition);
+        position: relative;
+        letter-spacing: 0.3px;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: var(--orange);
+        transition: var(--transition);
+        border-radius: 4px;
+      }
+      .nav-link:hover {
+        color: #fff;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* =============================================
+                   PAGE HERO
+                   ============================================= */
+      .page-hero {
+        position: relative;
+        padding: 140px 0 72px;
+        background: var(--blue-deep);
+        text-align: center;
+        overflow: hidden;
+      }
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&h=400&fit=crop")
+          center/cover no-repeat;
+        opacity: 0.1;
+      }
+      .page-hero .container {
+        position: relative;
+        z-index: 2;
+      }
+      .page-hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.6rem, 5vw, 3.8rem);
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .page-hero h1 .highlight {
+        color: var(--orange);
+      }
+      .page-hero p {
+        font-size: 1.15rem;
+        color: rgba(255, 255, 255, 0.75);
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      /* =============================================
+                   SECTION SPACING
+                   ============================================= */
+      .section-spacing {
+        padding: 72px 0 80px;
+      }
+      .section-spacing-sm {
+        padding: 56px 0 64px;
+      }
+      .bg-white {
+        background: var(--white);
+      }
+      .bg-light {
+        background: var(--gray-50);
+      }
+      .bg-blue-deep {
+        background: var(--blue-deep);
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .bg-blue-deep .section-title {
+        color: #fff;
+      }
+      .bg-blue-deep .section-subtitle {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* =============================================
+                   CONTACT GRID
+                   ============================================= */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        gap: 48px;
+        align-items: start;
+      }
+
+      /* ---- Left: Info ---- */
+      .contact-info h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.2rem;
+        color: var(--blue-deep);
+        margin-bottom: 12px;
+      }
+      .contact-info h2 .highlight {
+        color: var(--orange);
+      }
+      .contact-info .lead {
+        color: var(--gray-500);
+        line-height: 1.8;
+        margin-bottom: 24px;
+      }
+
+      .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 28px;
+      }
+      .contact-details li {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 1rem;
+        color: var(--gray-700);
+        padding: 10px 14px;
+        background: var(--gray-50);
+        border-radius: var(--radius-sm);
+        transition: var(--transition);
+        border-left: 3px solid transparent;
+      }
+      .contact-details li:hover {
+        background: var(--blue-light);
+        border-left-color: var(--orange);
+        transform: translateX(4px);
+      }
+      .contact-details li i {
+        width: 40px;
+        height: 40px;
+        background: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--blue-primary);
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        transition: var(--transition);
+      }
+      .contact-details li:hover i {
+        background: var(--blue-primary);
+        color: #fff;
+      }
+      .contact-details li .detail-label {
+        font-weight: 500;
+        color: var(--gray-500);
+        font-size: 0.8rem;
+        display: block;
+      }
+      .contact-details li .detail-value {
+        font-weight: 500;
+        color: var(--blue-deep);
+      }
+
+      .contact-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 4px;
+      }
+      .contact-socials a {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--gray-100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--blue-primary);
+        transition: var(--transition);
+        font-size: 1.15rem;
+        border: 1px solid var(--gray-200);
+      }
+      .contact-socials a:hover {
+        background: var(--blue-primary);
+        color: #fff;
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--blue-primary);
+      }
+
+      .contact-perks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 28px;
+      }
+      .perk-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.85rem;
+        color: var(--gray-700);
+        background: var(--white);
+        padding: 10px 14px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--gray-200);
+        transition: var(--transition);
+      }
+      .perk-item:hover {
+        border-color: var(--orange);
+        box-shadow: var(--shadow-sm);
+      }
+      .perk-item i {
+        color: var(--orange);
+        font-size: 1rem;
+      }
+
+      /* ---- Right: Form ---- */
+      .contact-form-wrapper {
+        background: var(--white);
+        padding: 36px 40px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--gray-200);
+      }
+      .contact-form-wrapper h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.4rem;
+        color: var(--blue-deep);
+        margin-bottom: 4px;
+      }
+      .contact-form-wrapper .form-subtitle {
+        color: var(--gray-500);
+        font-size: 0.9rem;
+        margin-bottom: 24px;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .form-group {
+        margin-bottom: 18px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: 500;
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        color: var(--gray-700);
+      }
+      .form-group label .required {
+        color: #e74c3c;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1.5px solid var(--gray-200);
+        border-radius: var(--radius-sm);
+        font-family: "Inter", sans-serif;
+        font-size: 0.95rem;
+        transition: var(--transition);
+        background: var(--gray-50);
+        color: var(--gray-700);
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--blue-primary);
+        box-shadow: 0 0 0 4px rgba(26, 82, 118, 0.08);
+        background: var(--white);
+      }
+      .form-group input::placeholder,
+      .form-group textarea::placeholder {
+        color: var(--gray-300);
+      }
+
+      .send-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 6px;
+      }
+      .send-actions .btn {
+        flex: 1 1 140px;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
+      .send-actions .btn i {
+        font-size: 1rem;
+      }
+
+      .form-footnote {
+        font-size: 0.78rem;
+        color: var(--gray-500);
+        margin-top: 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .form-footnote i {
+        color: var(--orange);
+      }
+
+      /* =============================================
+                   MAP
+                   ============================================= */
+      .map-section iframe {
+        width: 100%;
+        height: 380px;
+        border: 0;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-md);
+        margin-top: 8px;
+      }
+
+      /* =============================================
+                   FOOTER
+                   ============================================= */
+      .footer {
+        background: var(--blue-deep);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 56px 0 28px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.2fr;
+        gap: 44px;
+        margin-bottom: 40px;
+      }
+      .footer-brand .footer-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+      .footer-logo-img {
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        border: 2px solid var(--orange);
+        background: var(--blue-primary);
+        object-fit: cover;
+      }
+      .footer-brand p {
+        font-size: 0.92rem;
+        max-width: 300px;
+        line-height: 1.7;
+      }
+
+      .footer-links h4 {
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 14px;
+        font-size: 0.95rem;
+        letter-spacing: 0.3px;
+      }
+      .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .footer-links a {
+        font-size: 0.88rem;
+        transition: var(--transition);
+        opacity: 0.8;
+      }
+      .footer-links a:hover {
+        opacity: 1;
+        color: var(--orange);
+      }
+
+      .footer .contact-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 6px;
+      }
+      .footer .contact-socials a {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.5);
+        transition: var(--transition);
+        font-size: 1.1rem;
+      }
+      .footer .contact-socials a:hover {
+        background: var(--orange);
+        color: #fff;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding-top: 22px;
+        text-align: center;
+        font-size: 0.82rem;
+        opacity: 0.6;
+      }
+
+      /* =============================================
+                   STICKY WHATSAPP
+                   ============================================= */
+      .sticky-wa {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 9999;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        box-shadow: 0 6px 24px rgba(37, 211, 102, 0.35);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+      .sticky-wa:hover {
+        transform: scale(1.08);
+        box-shadow: 0 10px 36px rgba(37, 211, 102, 0.5);
+      }
+
+      /* =============================================
+                   RESPONSIVE
+                   ============================================= */
+      @media (max-width: 1024px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+        }
+        .contact-perks {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-toggle {
+          display: block;
+        }
+        .nav-menu {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 280px;
+          height: 100vh;
+          background: var(--blue-deep);
+          flex-direction: column;
+          padding: 80px 32px 40px;
+          gap: 18px;
+          box-shadow: -8px 0 40px rgba(0, 0, 0, 0.25);
+          transition: 0.4s ease;
+          align-items: flex-start;
+        }
+        .nav-menu.open {
+          right: 0;
+        }
+        .nav-link {
+          color: rgba(255, 255, 255, 0.85) !important;
+          font-size: 1.05rem;
+        }
+        .nav-link::after {
+          background: var(--orange) !important;
+        }
+
+        .page-hero {
+          padding: 120px 0 48px;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .contact-form-wrapper {
+          padding: 24px 20px;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+        .send-actions .btn {
+          flex: 1 1 100%;
+        }
+        .contact-perks {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+
+        .map-section iframe {
+          height: 260px;
+        }
+
+        .sticky-wa {
+          width: 50px;
+          height: 50px;
+          font-size: 1.5rem;
+          bottom: 18px;
+          right: 18px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .contact-details li {
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        .contact-details li .detail-label {
+          font-size: 0.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img
+            src="https://ui-avatars.com/api/?name=AZ&background=1a5276&color=fff&size=40&rounded=true"
+            alt="Acheda Zanzibar Tours logo"
+            class="nav-logo-img"
+          />
+          <span>Acheda<span class="logo-accent">Zanzibar</span></span>
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html#packages-6" class="nav-link">Packages</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="gallery.html" class="nav-link">Moments</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="support.html" class="nav-link">Support</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Let's Plan Your <span class="highlight">Zanzibar Escape</span></h1>
+        <p>
+          Reach out and we'll help you craft the perfect island itinerary —
+          tailored just for you
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section-spacing bg-white">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- ===== LEFT: INFO ===== -->
+          <div class="contact-info">
+            <div class="section-label">
+              <i class="fas fa-paper-plane"></i> Get in Touch
+            </div>
+            <h2>We'd Love to <span class="highlight">Hear From You</span></h2>
+            <p class="lead">
+              Whether you have a specific package in mind, need a custom
+              itinerary, or just want to ask a question — we're here to help.
+              Drop us a message and we'll get back to you within 24 hours.
+            </p>
+
+            <ul class="contact-details">
+              <li>
+                <i class="fas fa-phone"></i>
+                <div>
+                  <span class="detail-label">Phone</span>
+                  <span class="detail-value">+255 615 311 661</span>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <span class="detail-label">Email</span>
+                  <span class="detail-value">achedazanzibar@gmail.com</span>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <span class="detail-label">Address</span>
+                  <span class="detail-value"
+                    >Shangani Street, Stone Town, Zanzibar</span
+                  >
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <div>
+                  <span class="detail-label">Business Hours</span>
+                  <span class="detail-value"
+                    >Mon–Sat: 8:00 AM – 8:00 PM (EAT)</span
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-socials">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="#" aria-label="TripAdvisor"
+                ><i class="fab fa-tripadvisor"></i
+              ></a>
+            </div>
+
+            <div class="contact-perks">
+              <div class="perk-item">
+                <i class="fas fa-plane"></i> Free airport transfer
+              </div>
+              <div class="perk-item">
+                <i class="fas fa-credit-card"></i> Flexible payment
+              </div>
+              <div class="perk-item">
+                <i class="fas fa-headset"></i> 24/7 guest support
+              </div>
+              <div class="perk-item">
+                <i class="fas fa-check-circle"></i> No hidden fees
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== RIGHT: FORM ===== -->
+          <div class="contact-form-wrapper">
+            <h3>
+              Send a <span style="color: var(--orange)">Booking Request</span>
+            </h3>
+            <p class="form-subtitle">
+              Fill in the details and we'll get back to you within 24 hours.
+            </p>
+
+            <form id="bookingForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Full Name <span class="required">*</span></label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Email Address <span class="required">*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" id="phone" placeholder="+255..." />
+                </div>
+                <div class="form-group">
+                  <label>Number of People</label>
+                  <input type="number" id="people" placeholder="2" min="1" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Preferred Package</label>
+                <select id="packageSelect">
+                  <option value="">Select a package (optional)</option>
+                  <option value="6 Days Island Tour">6 Days Island Tour</option>
+                  <option value="5 Days Island Tour">5 Days Island Tour</option>
+                  <option value="4 Days Island Tour">4 Days Island Tour</option>
+                  <option value="3 Days Island Tour">3 Days Island Tour</option>
+                  <option value="Mikumi Day Safari">Mikumi Day Safari</option>
+                  <option value="Custom Itinerary">Custom / Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Travel Date (approx.)</label>
+                <input type="date" id="travelDate" />
+              </div>
+
+              <div class="form-group">
+                <label>Your Message / Special Requests</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Tell us about your ideal trip, dietary needs, or any special requests..."
+                ></textarea>
+              </div>
+
+              <!-- Send buttons -->
+              <div class="send-actions">
+                <button
+                  type="button"
+                  class="btn btn-whatsapp"
+                  id="sendWhatsApp"
+                >
+                  <i class="fab fa-whatsapp"></i> WhatsApp
+                </button>
+                <button type="button" class="btn btn-email" id="sendEmail">
+                  <i class="fas fa-envelope"></i> Email
+                </button>
+                <button type="button" class="btn btn-sms" id="sendSMS">
+                  <i class="fas fa-sms"></i> SMS
+                </button>
+              </div>
+
+              <div class="form-footnote">
+                <i class="fas fa-info-circle"></i>
+                Click a button to open your default app with the form details
+                pre-filled.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MAP ===== -->
+    <section class="section-spacing-sm bg-light map-section" id="map">
+      <div class="container">
+        <div class="section-label"><i class="fas fa-map-pin"></i> Find Us</div>
+        <h2 class="section-title">
+          Visit Us at <span class="highlight">Shangani Street</span>
+        </h2>
+        <p class="section-subtitle">
+          We're located in the heart of Stone Town, Zanzibar
+        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.275854265454!2d39.1869!3d-6.1632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185cd4b9e8c7f6f5%3A0x2b4c8e3c9f6e8d4!2sShangani%20Street%2C%20Zanzibar!5e0!3m2!1sen!2stz!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Acheda Zanzibar Tours location on Shangani Street, Stone Town"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section-spacing bg-blue-deep" style="text-align: center">
+      <div class="container">
+        <h2 class="section-title" style="color: #fff">
+          Prefer a <span class="highlight">Quick Chat</span>?
+        </h2>
+        <p
+          class="section-subtitle"
+          style="margin: 0 auto 28px; color: rgba(255, 255, 255, 0.7)"
+        >
+          Reach out to us directly on WhatsApp — we're always happy to help.
+        </p>
+        <a
+          href="https://wa.me/255615311661?text=Hi%20Acheda%20Zanzibar%20Tours!%20I%20found%20your%20website%20and%20I'd%20like%20to%20know%20more%20about%20your%20tours."
+          target="_blank"
+          class="btn btn-whatsapp"
+          style="font-size: 1.1rem; padding: 16px 44px"
+        >
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <img
+                src="https://ui-avatars.com/api/?name=AZ&background=1a5276&color=fff&size=44&rounded=true"
+                alt="Acheda Zanzibar Tours logo"
+                class="footer-logo-img"
+              />
+              <span>Acheda<span class="logo-accent">Zanzibar</span></span>
+            </a>
+            <p>
+              Your gateway to the Spice Island. We craft unforgettable
+              experiences that blend culture, nature, and pure relaxation.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html#packages-6">6 Days Packages</a></li>
+              <li><a href="index.html#packages-3">3 Days Packages</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="support.html#faq">FAQ</a></li>
+              <li><a href="support.html#terms">Terms &amp; Conditions</a></li>
+              <li><a href="support.html#privacy">Privacy Policy</a></li>
+              <li>
+                <a href="support.html#cancellation">Cancellation Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Follow Us</h4>
+            <div class="contact-socials">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Acheda Zanzibar Tours. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== STICKY WHATSAPP ===== -->
+    <a
+      href="https://wa.me/255615311661?text=Hi%20Acheda%20Zanzibar%20Tours!%20I%20found%20your%20website%20and%20I'm%20interested."
+      target="_blank"
+      class="sticky-wa"
+      aria-label="WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- =============================================
+JAVASCRIPT
+============================================= -->
+    <script>
+      // ============================================
+      // NAVBAR SCROLL
+      // ============================================
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 60);
+      });
+
+      // ============================================
+      // MOBILE MENU
+      // ============================================
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+      navToggle.addEventListener("click", () =>
+        navMenu.classList.toggle("open"),
+      );
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => navMenu.classList.remove("open"));
+      });
+
+      // ============================================
+      // CONTACT FORM — SEND BUTTONS
+      // ============================================
+      const businessPhone = "255615311661";
+      const businessEmail = "achedazanzibar@gmail.com";
+
+      function getFormData() {
+        const name =
+          document.getElementById("fullName").value.trim() || "Not provided";
+        const email =
+          document.getElementById("email").value.trim() || "Not provided";
+        const phone =
+          document.getElementById("phone").value.trim() || "Not provided";
+        const people =
+          document.getElementById("people").value || "Not specified";
+        const packageSel =
+          document.getElementById("packageSelect").value || "Not selected";
+        const travelDate =
+          document.getElementById("travelDate").value || "Not specified";
+        const message =
+          document.getElementById("message").value.trim() ||
+          "No additional message.";
+
+        return { name, email, phone, people, packageSel, travelDate, message };
+      }
+
+      function buildMessage(data) {
+        return `New booking request from Acheda Zanzibar Tours website:
+
+    Name: ${data.name}
+    Email: ${data.email}
+    Phone: ${data.phone}
+    Number of people: ${data.people}
+    Package: ${data.packageSel}
+    Travel date: ${data.travelDate}
+    Message: ${data.message}`;
+      }
+
+      // WhatsApp
+      document
+        .getElementById("sendWhatsApp")
+        .addEventListener("click", function () {
+          const data = getFormData();
+          const msg = buildMessage(data);
+          const url = `https://wa.me/${businessPhone}?text=${encodeURIComponent(msg)}`;
+          window.open(url, "_blank");
+        });
+
+      // Email
+      document
+        .getElementById("sendEmail")
+        .addEventListener("click", function () {
+          const data = getFormData();
+          const subject = `Booking inquiry from ${data.name}`;
+          const body = buildMessage(data);
+          const url = `mailto:${businessEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          window.open(url, "_blank");
+        });
+
+      // SMS
+      document.getElementById("sendSMS").addEventListener("click", function () {
+        const data = getFormData();
+        const body = buildMessage(data);
+        const url = `sms:${businessPhone}?body=${encodeURIComponent(body)}`;
+        window.open(url, "_blank");
+      });
+
+      // ============================================
+      // FORM VALIDATION (basic)
+      // ============================================
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("fullName").value.trim();
+          const email = document.getElementById("email").value.trim();
+          if (!name || !email) {
+            alert("Please fill in your name and email address.");
+            return;
+          }
+          alert(
+            "Thank you! Your request has been sent. We'll get back to you within 24 hours.",
+          );
+          this.reset();
+        });
+    </script>
+  </body>
+</html>
