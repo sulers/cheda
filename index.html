@@ -1,0 +1,2787 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acheda Zanzibar Tours — Spice Island Adventures</title>
+    <link rel="icon" type="image/png" href="https://ui-avatars.com/api/?name=AZ&background=1a5276&color=fff&size=32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        /* =============================================
+                   ROOT & RESET
+                   ============================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blue-deep: #0a2a3a;
+            --blue-primary: #1a5276;
+            --blue-bright: #2a7a9a;
+            --blue-light: #eaf2f7;
+            --orange: #e67e22;
+            --orange-light: #f5cba7;
+            --orange-glow: rgba(230, 126, 34, 0.20);
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f4f8;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-500: #64748b;
+            --gray-700: #1e293b;
+            --shadow-sm: 0 2px 8px rgba(10, 42, 58, 0.06);
+            --shadow-md: 0 8px 30px rgba(10, 42, 58, 0.10);
+            --shadow-lg: 0 20px 60px rgba(10, 42, 58, 0.14);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-700);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* =============================================
+                   TYPOGRAPHY
+                   ============================================= */
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--orange);
+            background: var(--orange-glow);
+            padding: 4px 20px;
+            border-radius: 40px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(230, 126, 34, 0.15);
+        }
+        .section-label i {
+            font-size: 0.6rem;
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 700;
+            color: var(--blue-deep);
+            line-height: 1.15;
+            margin-bottom: 6px;
+        }
+        .section-title .highlight {
+            color: var(--orange);
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--gray-500);
+            max-width: 640px;
+            font-weight: 400;
+            margin-bottom: 32px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        .text-center .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* =============================================
+                   BUTTONS
+                   ============================================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 34px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            letter-spacing: 0.2px;
+        }
+
+        .btn-primary {
+            background: var(--blue-primary);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(26, 82, 118, 0.25);
+        }
+        .btn-primary:hover {
+            background: var(--blue-deep);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(26, 82, 118, 0.35);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.30);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--blue-primary);
+            border: 1.5px solid var(--blue-primary);
+            padding: 8px 22px;
+            font-size: 0.85rem;
+            border-radius: 40px;
+        }
+        .btn-outline:hover {
+            background: var(--blue-primary);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 82, 118, 0.20);
+        }
+
+        .btn-orange {
+            background: var(--orange);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(230, 126, 34, 0.30);
+        }
+        .btn-orange:hover {
+            background: #d35400;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(230, 126, 34, 0.40);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.30);
+        }
+        .btn-whatsapp:hover {
+            background: #1ebe5c;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.40);
+        }
+
+        .btn-tripadvisor {
+            background: #34e0a1;
+            color: var(--blue-deep);
+            font-weight: 600;
+            box-shadow: 0 4px 16px rgba(52, 224, 161, 0.30);
+        }
+        .btn-tripadvisor:hover {
+            background: #28c98f;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(52, 224, 161, 0.40);
+        }
+
+        /* =============================================
+                   NAVIGATION
+                   ============================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 16px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(10, 42, 58, 0.94);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.12);
+            padding: 10px 0;
+        }
+
+        .nav-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: "Playfair Display", serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-logo .logo-accent {
+            color: var(--orange);
+            font-style: italic;
+        }
+        .nav-logo-img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--orange);
+            background: var(--blue-primary);
+            object-fit: cover;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #fff;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-link {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.80);
+            transition: var(--transition);
+            position: relative;
+            letter-spacing: 0.3px;
+        }
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+        .nav-link:hover {
+            color: #fff;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* =============================================
+                   HERO
+                   ============================================= */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url("https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&h=900&fit=crop") center/cover no-repeat;
+            text-align: center;
+            padding: 140px 28px 80px;
+            overflow: hidden;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(10, 42, 58, 0.82) 0%, rgba(10, 42, 58, 0.40) 60%, rgba(10, 42, 58, 0.60) 100%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 840px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(230, 126, 34, 0.18);
+            backdrop-filter: blur(6px);
+            color: var(--orange-light);
+            padding: 6px 24px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            letter-spacing: 1.2px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            border: 1px solid rgba(230, 126, 34, 0.20);
+        }
+        .hero-badge i {
+            font-size: 0.6rem;
+        }
+
+        .hero-title {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2.8rem, 10vw, 5.4rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.08;
+            margin-bottom: 18px;
+        }
+        .hero-title .highlight {
+            color: var(--orange);
+            position: relative;
+        }
+        .hero-title .highlight::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 4px;
+            width: 100%;
+            height: 8px;
+            background: var(--orange);
+            opacity: 0.25;
+            border-radius: 4px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 40px;
+            font-weight: 300;
+            line-height: 1.7;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            animation: floatDown 2.8s infinite ease-in-out;
+        }
+        @keyframes floatDown {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(12px);
+            }
+        }
+
+        /* =============================================
+                   SECTION SPACING
+                   ============================================= */
+        .section-spacing {
+            padding: 72px 0 80px;
+        }
+        .section-spacing-sm {
+            padding: 56px 0 64px;
+        }
+        .section-spacing-lg {
+            padding: 88px 0 96px;
+        }
+
+        .bg-white {
+            background: var(--white);
+        }
+        .bg-light {
+            background: var(--gray-50);
+        }
+        .bg-blue-deep {
+            background: var(--blue-deep);
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .bg-blue-deep .section-title {
+            color: #fff;
+        }
+        .bg-blue-deep .section-subtitle {
+            color: rgba(255, 255, 255, 0.70);
+        }
+
+        /* =============================================
+                   ABOUT US
+                   ============================================= */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+        .about-content .section-title {
+            font-size: 2.4rem;
+        }
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0 28px;
+        }
+        .about-highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--blue-light);
+            padding: 14px 18px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            border-left: 4px solid var(--orange);
+        }
+        .about-highlight-item:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-sm);
+        }
+        .about-highlight-item i {
+            color: var(--orange);
+            font-size: 1.2rem;
+            width: 28px;
+            text-align: center;
+        }
+        .about-highlight-item span {
+            font-weight: 500;
+            color: var(--blue-deep);
+            font-size: 0.95rem;
+        }
+        .about-text {
+            color: var(--gray-500);
+            line-height: 1.8;
+            font-size: 1.02rem;
+            margin-bottom: 20px;
+        }
+
+        /* =============================================
+                   INCLUDES BADGE
+                   ============================================= */
+        .includes-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px 36px;
+            margin: 8px 0 40px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+        }
+        .includes-section h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+            color: var(--blue-deep);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+        .includes-grid .include-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: var(--gray-700);
+            background: var(--gray-100);
+            padding: 10px 18px;
+            border-radius: 40px;
+            transition: var(--transition);
+        }
+        .includes-grid .include-item:hover {
+            background: var(--blue-light);
+            transform: translateX(4px);
+        }
+        .includes-grid .include-item i {
+            color: var(--blue-primary);
+            font-size: 0.9rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .all-inclusive-badge {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--blue-primary);
+            background: rgba(26, 82, 118, 0.06);
+            padding: 10px 28px;
+            border-radius: 40px;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgba(26, 82, 118, 0.08);
+        }
+        .all-inclusive-badge i {
+            color: var(--orange);
+            margin-right: 10px;
+        }
+
+        /* =============================================
+                   PACKAGE CARDS
+                   ============================================= */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+            margin-top: 8px;
+        }
+
+        .package-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(230, 126, 34, 0.15);
+        }
+
+        .package-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .package-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .package-card:hover .package-image img {
+            transform: scale(1.06);
+        }
+
+        .package-day {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(10, 42, 58, 0.80);
+            backdrop-filter: blur(6px);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 18px;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            z-index: 2;
+        }
+
+        .package-tag {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: var(--orange);
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 4px 16px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.35);
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .package-tag.popular {
+            background: #e74c3c;
+        }
+        .package-tag.value {
+            background: #2ecc71;
+            color: #0a2a3a;
+        }
+        .package-tag.couples {
+            background: #e67e22;
+        }
+        .package-tag.adventure {
+            background: #8e44ad;
+        }
+        .package-tag.cultural {
+            background: #2980b9;
+        }
+        .package-tag.relax {
+            background: #1abc9c;
+        }
+        .package-tag.safari {
+            background: #d35400;
+        }
+        .package-tag.welcome {
+            background: #27ae60;
+        }
+        .package-tag.departure {
+            background: #7f8c8d;
+        }
+        .package-tag.premium {
+            background: #f39c12;
+            color: #0a2a3a;
+        }
+
+        .package-body {
+            padding: 20px 22px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .package-title {
+            font-family: "Playfair Display", serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--blue-deep);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+        .package-desc {
+            font-size: 0.92rem;
+            color: var(--gray-500);
+            margin-bottom: 16px;
+            line-height: 1.6;
+            flex: 1;
+        }
+        .package-body .btn-outline {
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        /* =============================================
+                   PRICING TABLE
+                   ============================================= */
+        .pricing-table {
+            margin-top: 44px;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+        }
+        .pricing-table h4 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.25rem;
+            color: var(--blue-deep);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .pricing-table h4 i {
+            color: var(--orange);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 14px;
+        }
+        .pricing-item {
+            display: flex;
+            flex-direction: column;
+            background: var(--gray-100);
+            padding: 14px 20px;
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--orange);
+            transition: var(--transition);
+        }
+        .pricing-item:hover {
+            background: var(--blue-light);
+            transform: translateX(4px);
+        }
+        .pricing-item .pricing-label {
+            font-size: 0.78rem;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+        .pricing-item .pricing-amount {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--blue-primary);
+            line-height: 1.2;
+        }
+        .pricing-item .pricing-note {
+            font-size: 0.7rem;
+            color: var(--gray-500);
+        }
+
+        /* =============================================
+                   CONTACT
+                   ============================================= */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .contact-info .section-title {
+            font-size: 2.2rem;
+        }
+
+        .contact-details {
+            margin: 24px 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .contact-details li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 1rem;
+            color: var(--gray-700);
+        }
+        .contact-details li i {
+            width: 44px;
+            height: 44px;
+            background: var(--blue-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blue-primary);
+            font-size: 1rem;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+        .contact-details li:hover i {
+            background: var(--blue-primary);
+            color: #fff;
+        }
+
+        .contact-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 6px;
+        }
+        .contact-socials a {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blue-primary);
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+        .contact-socials a:hover {
+            background: var(--blue-primary);
+            color: #fff;
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 32px 36px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            color: var(--gray-700);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 18px;
+            border: 1.5px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            font-family: "Inter", sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            background: var(--gray-50);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--blue-primary);
+            box-shadow: 0 0 0 4px rgba(26, 82, 118, 0.08);
+            background: var(--white);
+        }
+
+        /* =============================================
+                   TESTIMONIALS
+                   ============================================= */
+        .testimonials-carousel {
+            position: relative;
+            overflow: hidden;
+            margin: 12px 0 28px;
+            border-radius: var(--radius);
+            padding: 0 48px;
+        }
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .testimonial-slide {
+            flex: 0 0 100%;
+            padding: 8px;
+        }
+        .testimonial-card {
+            background: var(--white);
+            padding: 36px 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            max-width: 760px;
+            margin: 0 auto;
+            border-top: 5px solid var(--orange);
+            transition: var(--transition);
+        }
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial-stars {
+            color: var(--orange);
+            font-size: 0.95rem;
+            letter-spacing: 3px;
+            margin-bottom: 14px;
+        }
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--gray-700);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .testimonial-author strong {
+            display: block;
+            font-weight: 600;
+            color: var(--blue-deep);
+        }
+        .testimonial-author span {
+            font-size: 0.82rem;
+            color: var(--gray-500);
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--white);
+            border: none;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            z-index: 5;
+            color: var(--blue-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-btn:hover {
+            background: var(--blue-primary);
+            color: #fff;
+            box-shadow: var(--shadow-md);
+        }
+        .carousel-prev {
+            left: 4px;
+        }
+        .carousel-next {
+            right: 4px;
+        }
+
+        .testimonials-cta {
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        /* =============================================
+                   GOOGLE MAPS
+                   ============================================= */
+        .map-section iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            margin-top: 12px;
+        }
+
+        /* =============================================
+                   STICKY BUTTONS (WhatsApp + Translate)
+                   ============================================= */
+        .sticky-buttons {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: flex-end;
+        }
+
+        .sticky-btn {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.20);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: #fff;
+            position: relative;
+            background: var(--blue-primary);
+        }
+        .sticky-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 36px rgba(0, 0, 0, 0.30);
+        }
+
+        .sticky-btn-wa {
+            background: #25d366;
+        }
+        .sticky-btn-wa:hover {
+            background: #1ebe5c;
+        }
+
+        .sticky-btn-translate {
+            background: var(--blue-primary);
+        }
+        .sticky-btn-translate:hover {
+            background: var(--blue-deep);
+        }
+
+        .translate-dropdown {
+            position: absolute;
+            bottom: 68px;
+            right: 0;
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            padding: 8px 0;
+            min-width: 160px;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+        }
+        .translate-dropdown.open {
+            display: flex;
+        }
+        .translate-dropdown button {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            text-align: left;
+            font-family: "Inter", sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--gray-700);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .translate-dropdown button:hover {
+            background: var(--blue-light);
+            color: var(--blue-primary);
+        }
+        .translate-dropdown button i {
+            width: 20px;
+            text-align: center;
+            color: var(--orange);
+        }
+        .translate-dropdown button.active-lang {
+            background: var(--blue-light);
+            color: var(--blue-primary);
+            font-weight: 600;
+        }
+
+        /* =============================================
+                   GOOGLE TRANSLATE WIDGET (visible bar at top)
+                   ============================================= */
+        .gt-bar-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10000;
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+            padding: 6px 16px;
+            display: none;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 12px;
+            border-bottom: 1px solid var(--gray-200);
+            flex-wrap: wrap;
+        }
+        .gt-bar-wrapper.active {
+            display: flex;
+        }
+        .gt-bar-wrapper .gt-label {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .gt-bar-wrapper .gt-label i {
+            color: var(--orange);
+        }
+        .gt-bar-wrapper #google_translate_element {
+            display: inline-block !important;
+        }
+        .gt-bar-wrapper .gt-close {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--gray-500);
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        .gt-bar-wrapper .gt-close:hover {
+            background: var(--gray-100);
+            color: var(--gray-700);
+        }
+
+        /* Hide the default Google Translate widget bar */
+        .goog-te-gadget {
+            font-family: "Inter", sans-serif !important;
+        }
+        .goog-te-gadget-simple {
+            border: none !important;
+            background: transparent !important;
+            padding: 4px 8px !important;
+        }
+        .goog-te-gadget-simple .goog-te-menu-value {
+            font-size: 0.85rem !important;
+            color: var(--blue-primary) !important;
+        }
+        .goog-te-gadget-simple .goog-te-menu-value span {
+            color: var(--blue-primary) !important;
+        }
+
+        /* Hide the Google Translate banner that appears at the top */
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+        body {
+            top: 0 !important;
+        }
+        .skiptranslate {
+            display: none !important;
+        }
+
+        /* =============================================
+                   FOOTER
+                   ============================================= */
+        .footer {
+            background: var(--blue-deep);
+            color: rgba(255, 255, 255, 0.70);
+            padding: 56px 0 28px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr;
+            gap: 44px;
+            margin-bottom: 40px;
+        }
+        .footer-brand .footer-logo {
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .footer-logo-img {
+            height: 44px;
+            width: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--orange);
+            background: var(--blue-primary);
+            object-fit: cover;
+        }
+        .footer-brand p {
+            font-size: 0.92rem;
+            max-width: 300px;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .footer-links a {
+            font-size: 0.88rem;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--orange);
+        }
+
+        .footer .contact-socials a {
+            background: rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.50);
+        }
+        .footer .contact-socials a:hover {
+            background: var(--orange);
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 22px;
+            text-align: center;
+            font-size: 0.82rem;
+            opacity: 0.6;
+        }
+
+        /* =============================================
+                   MODALS
+                   ============================================= */
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 42, 58, 0.72);
+            backdrop-filter: blur(10px);
+        }
+        .modal-content {
+            position: relative;
+            z-index: 2;
+            background: var(--white);
+            border-radius: var(--radius);
+            max-width: 720px;
+            width: 100%;
+            max-height: 82vh;
+            overflow-y: auto;
+            padding: 36px 40px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.30);
+            animation: fadeInUp 0.35s ease;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .modal-close {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            background: rgba(0, 0, 0, 0.04);
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--gray-700);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: var(--transition);
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-close:hover {
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        .modal-package-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            padding: 40px 44px;
+        }
+        .modal-package-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.8rem;
+            color: var(--blue-deep);
+            margin-bottom: 2px;
+            padding-right: 40px;
+        }
+        .modal-package-content .package-meta {
+            color: var(--gray-500);
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+        }
+        .modal-package-content .package-full-desc {
+            line-height: 1.8;
+            color: var(--gray-700);
+        }
+        .modal-package-content .package-full-desc p {
+            margin-bottom: 12px;
+        }
+        .modal-package-content .package-full-desc ul {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0 16px;
+        }
+        .modal-package-content .package-full-desc ul li {
+            padding: 4px 0 4px 28px;
+            position: relative;
+            margin-bottom: 2px;
+        }
+        .modal-package-content .package-full-desc ul li i {
+            position: absolute;
+            left: 0;
+            top: 6px;
+            color: var(--orange);
+        }
+
+        .package-inclusive-note {
+            background: var(--blue-light);
+            border-left: 5px solid var(--orange);
+            padding: 16px 22px;
+            border-radius: var(--radius-sm);
+            margin: 20px 0 18px;
+            font-size: 1rem;
+            color: var(--blue-deep);
+        }
+        .package-inclusive-note i {
+            color: var(--orange);
+            margin-right: 12px;
+        }
+
+        .modal-extra-images {
+            margin: 16px 0 24px;
+        }
+        .modal-extra-images h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--blue-deep);
+            margin-bottom: 10px;
+        }
+        .extra-images-scroll {
+            display: flex;
+            gap: 14px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+        }
+        .extra-images-scroll::-webkit-scrollbar {
+            height: 4px;
+        }
+        .extra-images-scroll::-webkit-scrollbar-thumb {
+            background: var(--blue-primary);
+            border-radius: 12px;
+        }
+        .extra-images-scroll img {
+            flex: 0 0 180px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .extra-images-scroll img:hover {
+            transform: scale(1.04);
+            box-shadow: var(--shadow-md);
+        }
+
+        .modal-whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #25d366;
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            border: none;
+            transition: var(--transition);
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+            margin-top: 8px;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.25);
+        }
+        .modal-whatsapp-btn:hover {
+            background: #1ebe5c;
+            transform: scale(1.02);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.35);
+        }
+
+        /* =============================================
+                   RESPONSIVE
+                   ============================================= */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-image img {
+                height: 300px;
+            }
+            .testimonials-carousel {
+                padding: 0 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--blue-deep);
+                flex-direction: column;
+                padding: 80px 32px 40px;
+                gap: 18px;
+                box-shadow: -8px 0 40px rgba(0, 0, 0, 0.25);
+                transition: 0.4s ease;
+                align-items: flex-start;
+            }
+            .nav-menu.open {
+                right: 0;
+            }
+            .nav-link {
+                color: rgba(255, 255, 255, 0.85) !important;
+                font-size: 1.05rem;
+            }
+            .nav-link::after {
+                background: var(--orange) !important;
+            }
+
+            .hero-title {
+                font-size: 2.4rem;
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr 1fr;
+            }
+            .about-content .section-title {
+                font-size: 1.8rem;
+            }
+
+            .testimonials-carousel {
+                padding: 0 8px;
+            }
+            .testimonial-card {
+                padding: 24px 20px;
+            }
+            .carousel-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+            }
+            .carousel-prev {
+                left: 0;
+            }
+            .carousel-next {
+                right: 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .modal-content {
+                padding: 24px 20px;
+                max-height: 70vh;
+            }
+            .modal-package-content {
+                padding: 24px 20px;
+            }
+            .modal-package-content h2 {
+                font-size: 1.4rem;
+            }
+            .extra-images-scroll img {
+                flex: 0 0 130px;
+                height: 100px;
+            }
+
+            .includes-section {
+                padding: 24px 18px;
+            }
+            .includes-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+            .includes-grid .include-item {
+                font-size: 0.78rem;
+                padding: 6px 14px;
+            }
+
+            .contact-form {
+                padding: 20px 16px;
+            }
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .pricing-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .section-spacing {
+                padding: 48px 0 56px;
+            }
+            .section-spacing-lg {
+                padding: 56px 0 64px;
+            }
+
+            .sticky-buttons {
+                bottom: 18px;
+                right: 18px;
+                gap: 12px;
+            }
+            .sticky-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+            .translate-dropdown {
+                min-width: 140px;
+                bottom: 60px;
+            }
+
+            .map-section iframe {
+                height: 280px;
+            }
+
+            .gt-bar-wrapper {
+                padding: 4px 12px;
+                gap: 8px;
+            }
+            .gt-bar-wrapper .gt-label {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .includes-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+            .pricing-table {
+                padding: 20px 16px;
+            }
+            .about-image img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =============================================
+    GOOGLE TRANSLATE BAR (hidden initially)
+    ============================================= -->
+    <div class="gt-bar-wrapper" id="gtBarWrapper">
+        <span class="gt-label"><i class="fas fa-globe"></i> <span id="gtLangLabel">English</span></span>
+        <div id="google_translate_element"></div>
+        <button class="gt-close" id="gtCloseBtn" aria-label="Close translate bar"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="https://ui-avatars.com/api/?name=AZ&background=1a5276&color=fff&size=40&rounded=true" alt="Acheda Zanzibar Tours logo" class="nav-logo-img" />
+                <span>Acheda<span class="logo-accent">Zanzibar</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#packages-6" class="nav-link">Packages</a></li>
+                <li><a href="gallery.html" class="nav-link">Moments in Zanzibar</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fas fa-location-dot"></i> Zanzibar • Tanzania</span>
+            <h1 class="hero-title">
+                Discover the<br /><span class="highlight">Spice Island</span>
+            </h1>
+            <p class="hero-subtitle">
+                White sand beaches, turquoise waters, and centuries of culture —<br />your dream island escape begins here.
+            </p>
+            <div class="hero-actions">
+                <a href="#packages-6" class="btn btn-primary"><i class="fas fa-compass"></i> Explore Packages</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT US ===== -->
+    <section class="section-spacing bg-white" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-label"><i class="fas fa-info-circle"></i> About Us</div>
+                    <h2 class="section-title">Your Trusted <span class="highlight">Zanzibar Guide</span></h2>
+                    <p class="about-text">
+                        Welcome to <strong>Acheda Zanzibar Tours</strong> – your gateway to the Spice Island. We are a locally-owned tour company dedicated to showing you the authentic soul of Zanzibar. With years of experience and deep roots in the community, we craft personalized adventures that blend culture, nature, and pure relaxation.
+                    </p>
+                    <p class="about-text">
+                        We believe that <strong>travel should be affordable and stress-free</strong>. That's why we offer competitive prices without compromising on quality. Our all-inclusive packages cover everything – from transport and meals to entrance fees and expert guides – so you can focus on making memories.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="about-highlight-item"><i class="fas fa-tag"></i> <span>Best Price Guarantee</span></div>
+                        <div class="about-highlight-item"><i class="fas fa-shield-alt"></i> <span>Reliable &amp; Trusted</span></div>
+                        <div class="about-highlight-item"><i class="fas fa-user-tie"></i> <span>Local Expertise</span></div>
+                        <div class="about-highlight-item"><i class="fas fa-smile"></i> <span>100% Satisfaction</span></div>
+                        <div class="about-highlight-item"><i class="fas fa-clock"></i> <span>On-Time Service</span></div>
+                        <div class="about-highlight-item"><i class="fas fa-undo-alt"></i> <span>Flexible Itineraries</span></div>
+                    </div>
+                    <a href="#packages-6" class="btn btn-primary"><i class="fas fa-umbrella-beach"></i> View Our Packages</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1542406775-5c7fea9b9d3b?w=800&h=600&fit=crop" alt="Zanzibar beach and dhow" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6 DAYS PACKAGES ===== -->
+    <section class="section-spacing bg-light" id="packages-6">
+        <div class="container">
+            <div class="section-label"><i class="fas fa-umbrella-beach"></i> Packages</div>
+            <h2 class="section-title">6 Days <span class="highlight">Island Tour</span></h2>
+            <p class="section-subtitle">Experience the very best of Zanzibar over six unforgettable days</p>
+
+            <!-- INCLUDES -->
+            <div class="includes-section">
+                <h3><i class="fas fa-gem" style="color:var(--orange);margin-right:10px;"></i> What's Included in Every Package</h3>
+                <div class="includes-grid">
+                    <div class="include-item"><i class="fas fa-car"></i> Pick up &amp; drop off</div>
+                    <div class="include-item"><i class="fas fa-receipt"></i> Government taxes</div>
+                    <div class="include-item"><i class="fas fa-ticket-alt"></i> Entrance fees</div>
+                    <div class="include-item"><i class="fas fa-user-tie"></i> Expert guide</div>
+                    <div class="include-item"><i class="fas fa-water"></i> Bottled water</div>
+                    <div class="include-item"><i class="fas fa-utensils"></i> Seafood / Chicken lunch</div>
+                    <div class="include-item"><i class="fas fa-apple-alt"></i> Fresh fruits</div>
+                    <div class="include-item"><i class="fas fa-plane"></i> Free airport transfer</div>
+                    <div class="include-item"><i class="fas fa-wifi"></i> Free WiFi</div>
+                </div>
+                <p class="all-inclusive-badge"><i class="fas fa-check-circle"></i> All-inclusive – one single fee covers everything!</p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Day 1 -->
+                <div class="package-card" data-package="day1-6">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=600&h=400&fit=crop" alt="Spice Farm" loading="lazy" />
+                        <span class="package-day">Day 1</span>
+                        <span class="package-tag popular">Most Popular</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Spice Farm + Prison Island + Stone Town</h3>
+                        <p class="package-desc">Discover Zanzibar's famous spices, meet giant tortoises, and wander the historic streets of Stone Town.</p>
+                        <button class="btn btn-outline package-more" data-package="day1-6">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- Day 2 -->
+                <div class="package-card" data-package="day2-6">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop" alt="Mnemba Island" loading="lazy" />
+                        <span class="package-day">Day 2</span>
+                        <span class="package-tag couples">Best for Couples</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Mnemba Island &amp; Sunset Cruise</h3>
+                        <p class="package-desc">Snorkel crystal-clear waters, swim with dolphins, and enjoy a magical sunset cruise at Kendwa Beach.</p>
+                        <button class="btn btn-outline package-more" data-package="day2-6">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- Day 3 -->
+                <div class="package-card" data-package="day3-6">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1542406775-5c7fea9b9d3b?w=600&h=400&fit=crop" alt="Jozani Forest" loading="lazy" />
+                        <span class="package-day">Day 3</span>
+                        <span class="package-tag adventure">Adventure</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Jozani Forest + Salaam Cave + The Rock</h3>
+                        <p class="package-desc">Spot rare red colobus monkeys, swim in natural cave pools, and dine at Zanzibar's iconic Rock Restaurant.</p>
+                        <button class="btn btn-outline package-more" data-package="day3-6">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- Day 4 -->
+                <div class="package-card" data-package="day4-6">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=600&h=400&fit=crop" alt="Safari Blue" loading="lazy" />
+                        <span class="package-day">Day 4</span>
+                        <span class="package-tag value">Best Value</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Safari Blue</h3>
+                        <p class="package-desc">Sail on a traditional dhow, snorkel vibrant reefs, and enjoy a seafood barbecue on a pristine sandbank.</p>
+                        <button class="btn btn-outline package-more" data-package="day4-6">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- Day 5 -->
+                <div class="package-card" data-package="day5-6">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1558980664-3a031cf67ea9?w=600&h=400&fit=crop" alt="Cooking class" loading="lazy" />
+                        <span class="package-day">Day 5</span>
+                        <span class="package-tag cultural">Cultural</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Village Visit &amp; Cooking Class</h3>
+                        <p class="package-desc">Immerse yourself in local culture, visit a traditional village, and learn to cook authentic Zanzibari dishes.</p>
+                        <button class="btn btn-outline package-more" data-package="day5-6">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- Day 6 -->
+                <div class="package-card" data-package="day6-6">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop" alt="Paje Beach" loading="lazy" />
+                        <span class="package-day">Day 6</span>
+                        <span class="package-tag relax">Relaxation</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Starfish at Pingwe + Paje Beach</h3>
+                        <p class="package-desc">See beautiful starfish in their natural habitat and relax on the stunning white sands of Paje Beach.</p>
+                        <button class="btn btn-outline package-more" data-package="day6-6">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pricing-table">
+                <h4><i class="fas fa-tag"></i> 6 Days Package – Pricing</h4>
+                <div class="pricing-grid">
+                    <div class="pricing-item"><span class="pricing-label">1 person</span><span class="pricing-amount">$800</span><span class="pricing-note">per person</span></div>
+                    <div class="pricing-item"><span class="pricing-label">2 people</span><span class="pricing-amount">$480</span><span class="pricing-note">per person</span></div>
+                    <div class="pricing-item"><span class="pricing-label">2–5 people</span><span class="pricing-amount">$420</span><span class="pricing-note">per person</span></div>
+                    <div class="pricing-item"><span class="pricing-label">5–10 people</span><span class="pricing-amount">$350</span><span class="pricing-note">per person</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5 DAYS PACKAGES ===== -->
+    <section class="section-spacing bg-white" id="packages-5">
+        <div class="container">
+            <div class="section-label"><i class="fas fa-umbrella-beach"></i> Packages</div>
+            <h2 class="section-title">5 Days <span class="highlight">Island Tour</span></h2>
+            <p class="section-subtitle">Day 1 for airport pickup and drop off, day 5 for departure transfer. A well-rounded island escape combining beaches, marine life, and culture.</p>
+
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop" alt="Airport Transfer" loading="lazy" />
+                        <span class="package-day">Day 1</span>
+                        <span class="package-tag welcome">Welcome</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Airport Pickup &amp; Hotel Transfer</h3>
+                        <p class="package-desc">Before an unforgettable Zanzibar adventure, enjoy a comfortable transfer from the airport to your hotel.</p>
+                    </div>
+                </div>
+                <div class="package-card" data-package="day1-5">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop" alt="Mnemba Island" loading="lazy" />
+                        <span class="package-day">Day 2</span>
+                        <span class="package-tag couples">Best for Couples</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Mnemba Island, Nungwi Beach &amp; Sunset Cruise</h3>
+                        <p class="package-desc">Enjoy dolphin spotting, snorkeling, beach relaxation at Nungwi, and a magical sunset dhow cruise.</p>
+                        <button class="btn btn-outline package-more" data-package="day1-5">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="package-card" data-package="day2-5">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=600&h=400&fit=crop" alt="Spice Farm" loading="lazy" />
+                        <span class="package-day">Day 3</span>
+                        <span class="package-tag popular">Most Popular</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Spice Farm, Prison Island &amp; Stone Town</h3>
+                        <p class="package-desc">Discover Zanzibar's famous spices, visit the giant tortoises, and explore the rich history of Stone Town.</p>
+                        <button class="btn btn-outline package-more" data-package="day2-5">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="package-card" data-package="day3-5">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1542406775-5c7fea9b9d3b?w=600&h=400&fit=crop" alt="Jozani Forest" loading="lazy" />
+                        <span class="package-day">Day 4</span>
+                        <span class="package-tag adventure">Adventure</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Jozani Forest, Salaam Cave, Mtende Beach &amp; The Rock</h3>
+                        <p class="package-desc">Meet the red colobus monkeys, swim with sea turtles, visit one of Zanzibar's most beautiful beaches, and stop at the iconic Rock Restaurant.</p>
+                        <button class="btn btn-outline package-more" data-package="day3-5">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop" alt="Airport Transfer" loading="lazy" />
+                        <span class="package-day">Day 5</span>
+                        <span class="package-tag departure">Departure</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Departure Transfer</h3>
+                        <p class="package-desc">After an unforgettable Zanzibar adventure, enjoy a comfortable transfer to the airport for your departure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-table">
+                <h4><i class="fas fa-tag"></i> 5 Days Package – Pricing</h4>
+                <div class="pricing-grid">
+                    <div class="pricing-item"><span class="pricing-label">1 person</span><span class="pricing-amount">$720</span><span class="pricing-note">per person</span></div>
+                    <div class="pricing-item"><span class="pricing-label">2 people</span><span class="pricing-amount">$550</span><span class="pricing-note">per person</span></div>
+                    <div class="pricing-item"><span class="pricing-label">3–6 people</span><span class="pricing-amount">$400</span><span class="pricing-note">per person</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4 DAYS PACKAGES ===== -->
+    <section class="section-spacing bg-light" id="packages-4">
+        <div class="container">
+            <div class="section-label"><i class="fas fa-umbrella-beach"></i> Packages</div>
+            <h2 class="section-title">4 Days <span class="highlight">Island Tour</span></h2>
+            <p class="section-subtitle">A quick but complete taste of Zanzibar's beaches, culture, and cuisine</p>
+
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop" alt="Airport Transfer" loading="lazy" />
+                        <span class="package-day">Day 1</span>
+                        <span class="package-tag welcome">Welcome</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Airport Pickup &amp; Hotel Transfer</h3>
+                        <p class="package-desc">Before an unforgettable Zanzibar adventure, enjoy a comfortable transfer from the airport to your hotel.</p>
+                    </div>
+                </div>
+                <div class="package-card" data-package="day1-4">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=600&h=400&fit=crop" alt="Spice Farm" loading="lazy" />
+                        <span class="package-day">Day 2</span>
+                        <span class="package-tag popular">Most Popular</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Spice Farm, Prison Island, Nakupenda, Stone Town &amp; Night Market</h3>
+                        <p class="package-desc">Visit a Spice Farm, meet giant tortoises, relax at Nakupenda Sandbank, explore Stone Town, and enjoy the Night Food Market.</p>
+                        <button class="btn btn-outline package-more" data-package="day1-4">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="package-card" data-package="day2-4">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop" alt="Mnemba Island" loading="lazy" />
+                        <span class="package-day">Day 3</span>
+                        <span class="package-tag couples">Best for Couples</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Mnemba Island, Sea Turtles, Kendwa Beach &amp; Sunset Cruise</h3>
+                        <p class="package-desc">Snorkel and explore marine life at Mnemba Island, swim with sea turtles, relax at Kendwa Beach, and end with a sunset cruise.</p>
+                        <button class="btn btn-outline package-more" data-package="day2-4">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop" alt="Airport Transfer" loading="lazy" />
+                        <span class="package-day">Day 4</span>
+                        <span class="package-tag departure">Departure</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Departure Transfer</h3>
+                        <p class="package-desc">After an unforgettable Zanzibar adventure, enjoy a comfortable transfer to the airport for your departure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-table">
+                <h4><i class="fas fa-tag"></i> 4 Days Package – Pricing</h4>
+                <div class="pricing-grid">
+                    <div class="pricing-item"><span class="pricing-label">1 person</span><span class="pricing-amount">$520</span><span class="pricing-note">per person</span></div>
+                    <div class="pricing-item"><span class="pricing-label">2 people</span><span class="pricing-amount">$290</span><span class="pricing-note">per person</span></div>
+                    <div class="pricing-item"><span class="pricing-label">2–5 people</span><span class="pricing-amount">$250</span><span class="pricing-note">per person</span></div>
+                    <div class="pricing-item"><span class="pricing-label">5–10 people</span><span class="pricing-amount">$220</span><span class="pricing-note">per person</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3 DAYS PACKAGES ===== -->
+    <section class="section-spacing bg-white" id="packages-3">
+        <div class="container">
+            <div class="section-label"><i class="fas fa-umbrella-beach"></i> Packages</div>
+            <h2 class="section-title">3 Days <span class="highlight">Island Tour</span></h2>
+            <p class="section-subtitle">A shorter escape packed with Zanzibar's most iconic experiences</p>
+
+            <div class="packages-grid">
+                <div class="package-card" data-package="day1-3">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1542406775-5c7fea9b9d3b?w=600&h=400&fit=crop" alt="Jozani Forest" loading="lazy" />
+                        <span class="package-day">Day 1</span>
+                        <span class="package-tag adventure">Adventure</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Jozani Forest + Salaam Cave + The Rock</h3>
+                        <p class="package-desc">Explore the lush Jozani Forest, swim in Salaam Cave, and dine at the iconic Rock Restaurant.</p>
+                        <button class="btn btn-outline package-more" data-package="day1-3">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="package-card" data-package="day2-3">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop" alt="Mnemba Island" loading="lazy" />
+                        <span class="package-day">Day 2</span>
+                        <span class="package-tag couples">Best for Couples</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Mnemba Island – Swimming with Dolphins</h3>
+                        <p class="package-desc">Swim alongside wild dolphins, snorkel vibrant coral reefs, and relax on Mnemba's pristine sandbank.</p>
+                        <button class="btn btn-outline package-more" data-package="day2-3">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="package-card" data-package="day3-3">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=600&h=400&fit=crop" alt="Spice Farm" loading="lazy" />
+                        <span class="package-day">Day 3</span>
+                        <span class="package-tag popular">Most Popular</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Spice Farm + Prison Island + Stone Town</h3>
+                        <p class="package-desc">Experience the Spice Island, visit Prison Island's tortoises, and explore historic Stone Town.</p>
+                        <button class="btn btn-outline package-more" data-package="day3-3">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-table">
+                <h4><i class="fas fa-tag"></i> 3 Days Package – Pricing</h4>
+                <div class="pricing-grid">
+                    <div class="pricing-item"><span class="pricing-label">1 person</span><span class="pricing-amount">$490</span><span class="pricing-note">per person</span></div>
+                    <div class="pricing-item"><span class="pricing-label">2 people</span><span class="pricing-amount">$320</span><span class="pricing-note">per person</span></div>
+                    <div class="pricing-item"><span class="pricing-label">3–6 people</span><span class="pricing-amount">$250</span><span class="pricing-note">per person</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MIKUMI DAY TRIP ===== -->
+    <section class="section-spacing bg-light" id="mikumi-safari">
+        <div class="container">
+            <div class="section-label"><i class="fas fa-tree"></i> Safari</div>
+            <h2 class="section-title">Mikumi <span class="highlight">Day Trip Safari</span></h2>
+            <p class="section-subtitle">A fly-in safari day trip from Zanzibar to Mikumi National Park</p>
+
+            <div class="packages-grid">
+                <div class="package-card" data-package="mikumi">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&h=400&fit=crop" alt="Mikumi Safari" loading="lazy" />
+                        <span class="package-day">Day Trip</span>
+                        <span class="package-tag safari">Safari Special</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Mikumi National Park Safari</h3>
+                        <p class="package-desc">Fly round-trip from Zanzibar to Mikumi for a full day of game drives in an open jeep, with lunch and soft drinks included.</p>
+                        <button class="btn btn-outline package-more" data-package="mikumi">More Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-table">
+                <h4><i class="fas fa-tag"></i> Mikumi Day Trip – Pricing</h4>
+                <div class="pricing-grid">
+                    <div class="pricing-item"><span class="pricing-label">Contact us</span><span class="pricing-amount" style="font-size:1.2rem;">for current pricing</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 2 DAYS 1 NIGHT SAFARI ===== -->
+    <section class="section-spacing bg-white" id="packages-2d1n">
+        <div class="container">
+            <div class="section-label"><i class="fas fa-tree"></i> Safari</div>
+            <h2 class="section-title">2 Days <span class="highlight">1 Night</span></h2>
+            <p class="section-subtitle">A 2-day escape for safari.</p>
+
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&h=400&fit=crop" alt="Safari Image" loading="lazy" />
+                        <span class="package-day">Day 1</span>
+                        <span class="package-tag safari">Safari</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Day 1</h3>
+                        <p class="package-desc">Morning Flight 06:15 – 07:05. Full day safari in private jeep. Lunch, evening dinner, and overnight at Selous Safari Lodge.</p>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=600&h=400&fit=crop" alt="Safari Image" loading="lazy" />
+                        <span class="package-day">Day 2</span>
+                        <span class="package-tag safari">Safari</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Day 2</h3>
+                        <p class="package-desc">Boat safari, Maasai village visit. Afternoon flight back to Zanzibar 16:00 – 17:10.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3 DAYS 2 NIGHT SAFARI ===== -->
+    <section class="section-spacing bg-light" id="packages-3d2n">
+        <div class="container">
+            <div class="section-label"><i class="fas fa-tree"></i> Safari</div>
+            <h2 class="section-title">3 Days <span class="highlight">2 Nights</span></h2>
+            <p class="section-subtitle">A 3-day escape for safari.</p>
+
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop" alt="Safari image" loading="lazy" />
+                        <span class="package-day">Day 1</span>
+                        <span class="package-tag safari">Safari</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Day 1</h3>
+                        <p class="package-desc">Flight to Serengeti. Overnight at Serengeti Safari Lodge / Wildebeest.</p>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&h=400&fit=crop" alt="Safari image" loading="lazy" />
+                        <span class="package-day">Day 2</span>
+                        <span class="package-tag safari">Safari</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Day 2</h3>
+                        <p class="package-desc">Serengeti overnight: Serengeti Safari Lodge / Wildebeest.</p>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=600&h=400&fit=crop" alt="Safari image" loading="lazy" />
+                        <span class="package-day">Day 3</span>
+                        <span class="package-tag safari">Safari</span>
+                    </div>
+                    <div class="package-body">
+                        <h3 class="package-title">Day 3</h3>
+                        <p class="package-desc">Ngorongoro + Departure to Kilimanjaro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section-spacing bg-white" id="testimonials">
+        <div class="container">
+            <div class="section-label"><i class="fas fa-star"></i> Testimonials</div>
+            <h2 class="section-title">What Our <span class="highlight">Travelers Say</span></h2>
+            <p class="section-subtitle">Real stories from real people who explored Zanzibar with us</p>
+
+            <div class="testimonials-carousel" id="testimonialsCarousel">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"When asking for advice via social media, you are inundated with tour guides promoting themselves. We contacted a handful. The reason we chose Acheda, was because he was not pushy. His prices seemed the average going rate. I also asked about numerous other things before arriving (for example weather on the island) he took photos of the sky every day, and sent them to me without request, just to put my mind at ease. It was then I knew we'd found our person. Acheda is a young &amp; ambitious gentleman. He's worked very hard to get a good job in Zanzibar, at such a young age."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background:var(--blue-primary);">SW</div>
+                                <div><strong>Sarah W.</strong><span>TripAdvisor</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Acheda and his team are by far the best tour guides in Zanzibar, Acheda is very knowledgeable and always goes the extra mile. My family and I really enjoyed our time in Zanzibar and it is all thanks to Acheda. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background:var(--orange);">GW</div>
+                                <div><strong>Getaway48857638034</strong><span>TripAdvisor</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"We had an amazing experience with Acheda! He took us to the Spice Farm and Stone Town, and both tours were incredibly interesting and well organized."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background:#2c7a7a;">HM</div>
+                                <div><strong>H M</strong><span>TripAdvisor</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-prev" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn carousel-next" id="carouselNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="testimonials-cta">
+                <a href="#" target="_blank" class="btn btn-tripadvisor"><i class="fab fa-tripadvisor"></i> See More Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GOOGLE MAPS ===== -->
+    <section class="section-spacing bg-light map-section" id="map">
+        <div class="container">
+            <div class="section-label"><i class="fas fa-map-pin"></i> Find Us</div>
+            <h2 class="section-title">Visit Us at <span class="highlight">Shangani Street</span></h2>
+            <p class="section-subtitle">We're located in the heart of Stone Town, Zanzibar</p>
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.275854265454!2d39.1869!3d-6.1632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185cd4b9e8c7f6f5%3A0x2b4c8e3c9f6e8d4!2sShangani%20Street%2C%20Zanzibar!5e0!3m2!1sen!2stz!4v1700000000000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Acheda Zanzibar Tours location on Shangani Street, Stone Town">
+        </iframe>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section-spacing-lg bg-blue-deep" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="section-label" style="background:rgba(230,126,34,0.15);color:var(--orange-light);border-color:rgba(230,126,34,0.15);">
+                    <i class="fas fa-paper-plane"></i> Contact
+                </div>
+                <h2 class="section-title" style="color:#fff;">Let's Plan Your<br /><span class="highlight">Zanzibar Adventure</span></h2>
+                <p class="section-subtitle" style="color:rgba(255,255,255,0.70);">Reach out to us and we'll help you craft the perfect island itinerary.</p>
+                <ul class="contact-details" style="color:rgba(255,255,255,0.85);">
+                    <li><i style="background:rgba(255,255,255,0.08);color:var(--orange);"> <i class="fas fa-phone"></i> </i> <span>+255 711 322 064</span></li>
+                    <li><i style="background:rgba(255,255,255,0.08);color:var(--orange);"> <i class="fas fa-envelope"></i> </i> <span>achedazanzibar@gmail.com</span></li>
+                    <li><i style="background:rgba(255,255,255,0.08);color:var(--orange);"> <i class="fas fa-map-marker-alt"></i> </i> <span>Shangani Street, Stone Town, Zanzibar</span></li>
+                </ul>
+                <div class="contact-socials" style="margin-top:12px;">
+                    <a href="#" style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.60);"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.60);"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.60);"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm" style="background:rgba(255,255,255,0.05);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);">
+                <div class="form-group">
+                    <label style="color:rgba(255,255,255,0.80);">Full Name</label>
+                    <input type="text" id="name" placeholder="Your name" required style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.10);color:#fff;" />
+                </div>
+                <div class="form-group">
+                    <label style="color:rgba(255,255,255,0.80);">Email Address</label>
+                    <input type="email" id="email" placeholder="you@example.com" required style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.10);color:#fff;" />
+                </div>
+                <div class="form-group">
+                    <label style="color:rgba(255,255,255,0.80);">Message</label>
+                    <textarea id="message" rows="4" placeholder="Tell us about your dream trip..." required style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.10);color:#fff;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-orange" style="width:100%;justify-content:center;">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    <img src="https://ui-avatars.com/api/?name=AZ&background=1a5276&color=fff&size=44&rounded=true" alt="Acheda Zanzibar Tours logo" class="footer-logo-img" />
+                    <span>Acheda<span class="logo-accent">Zanzibar</span></span>
+                </a>
+                <p>Your gateway to the Spice Island. We craft unforgettable experiences that blend culture, nature, and pure relaxation.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#packages-6">6 Days Packages</a></li>
+                    <li><a href="#packages-3">3 Days Packages</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#terms">Terms &amp; Conditions</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#cancellation">Cancellation Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Follow Us</h4>
+                <div class="contact-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Acheda Zanzibar Tours. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== STICKY BUTTONS ===== -->
+<div class="sticky-buttons">
+    <!-- Translate Button -->
+    <div style="position:relative;">
+        <button class="sticky-btn sticky-btn-translate" id="translateBtn" aria-label="Translate">
+            <i class="fas fa-language"></i>
+        </button>
+        <div class="translate-dropdown" id="translateDropdown">
+            <button data-lang="en" class="active-lang"><i class="fas fa-check-circle"></i> English</button>
+            <button data-lang="fr"><i class="fas fa-flag"></i> Français</button>
+            <button data-lang="de"><i class="fas fa-flag"></i> Deutsch</button>
+        </div>
+    </div>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/255711322064?text=Hi%20Acheda%20Zanzibar%20Tours!%20I'm%20interested%20in%20your%20tours." target="_blank" class="sticky-btn sticky-btn-wa" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<!-- ===== MODALS ===== -->
+<div class="modal" id="packageModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content modal-package-content" id="packageModalContent">
+        <button class="modal-close" id="packageModalClose"><i class="fas fa-times"></i></button>
+        <div id="packageModalBody"></div>
+    </div>
+</div>
+
+<!-- =============================================
+JAVASCRIPT
+============================================= -->
+<script>
+    // =============================================
+    // NAVBAR SCROLL
+    // =============================================
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 60);
+    });
+
+    // =============================================
+    // MOBILE MENU
+    // =============================================
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("navMenu");
+    navToggle.addEventListener("click", () => navMenu.classList.toggle("open"));
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", () => navMenu.classList.remove("open"));
+    });
+
+    // =============================================
+    // PACKAGE DATA
+    // =============================================
+    const packageData = {
+        "day1-6": {
+            title: "Day 1: Spice Farm + Prison Island + Stone Town",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Your journey begins with a 9:00 AM hotel pickup. First, visit a traditional Spice Farm, where you'll discover Zanzibar's famous spices, tropical fruits, and medicinal plants while enjoying fresh fruit tasting. Next, head to Prison Island by boat to meet the giant Aldabra tortoises and learn about the island's fascinating history. Afterward, continue with a Stone Town Walking Tour, exploring the Old Slave Market, Darajani Market, Old Fort, House of Wonders, Freddie Mercury House, Forodhani Gardens, and the charming narrow streets filled with local culture and history. After an unforgettable day exploring the best of Zanzibar, you'll be transferred back to your hotel.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1590549413563-9e9e700d7cb9?w=400&h=300&fit=crop"
+            ]
+        },
+        "day2-6": {
+            title: "Day 2: Mnemba Island & Sunset Cruise at Kendwa Beach",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Your day begins with a 9:00 AM hotel pickup and a transfer to the departure point for your Mnemba Island excursion. Enjoy snorkeling in the crystal-clear waters, discover colorful coral reefs and tropical fish, relax on the beautiful sandbank (weather permitting), and keep an eye out for dolphins in their natural habitat. After your ocean adventure, you'll have time to relax before heading to Kendwa Beach for a magical Sunset Cruise. Sail along Zanzibar's stunning coastline, take in breathtaking sunset views, enjoy the refreshing sea breeze, and create unforgettable memories as the sun sets over the Indian Ocean. After the cruise, you'll be transferred back to your hotel.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop"
+            ]
+        },
+        "day3-6": {
+            title: "Day 3: Jozani Forest + Salaam Cave + Mtende Beach + The Rock",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Your tour begins with a 9:00 AM hotel pickup and a drive to Jozani Forest, home to the rare Zanzibar Red Colobus Monkeys and a beautiful mangrove boardwalk. Next, visit Salaam Cave, where you can swim in crystal-clear natural water, feed sea turtles, and enjoy the peaceful surroundings. Continue to the stunning Mtende Beach, known for its white sand, turquoise water, and breathtaking coastal scenery. End your journey at the famous The Rock Restaurant, one of Zanzibar's most iconic dining spots, where you can admire spectacular ocean views and enjoy a delicious meal or refreshing drink (meal not included). After an unforgettable day exploring Zanzibar's nature and coastline, you'll be transferred back to your hotel.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1542406775-5c7fea9b9d3b?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=400&h=300&fit=crop"
+            ]
+        },
+        "day4-6": {
+            title: "Day 4: Safari Blue",
+            meta: "Duration: full day | Pick-up: 8:00 AM",
+            desc: `<p>Your adventure starts with a 8:00 AM hotel pickup and a transfer to Fumba, where you'll board a traditional wooden dhow for the famous Safari Blue excursion. Cruise across the crystal-clear waters of the Indian Ocean, snorkel among vibrant coral reefs, relax on a pristine sandbank, and swim in a natural lagoon surrounded by mangrove trees. Enjoy a freshly prepared seafood barbecue with tropical fruits and refreshing drinks while taking in the beauty of Zanzibar's coastline. This full-day experience offers the perfect combination of sailing, swimming, snorkeling, and relaxation before returning to your hotel with unforgettable memories.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop"
+            ]
+        },
+        "day5-6": {
+            title: "Day 5: Village Visit & Cooking Class",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Your experience begins with a 9:00 AM hotel pickup and a warm welcome to a local village. Discover Zanzibar's rich culture as you explore traditional homes, meet friendly locals, and learn about their daily way of life. Then, join a hands-on cooking class where you'll prepare authentic Zanzibari dishes using fresh local ingredients and aromatic spices. After enjoying the delicious meal you've helped create, you'll have time to interact with the community and experience the true taste and traditions of Zanzibar before returning to your hotel.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1558980664-3a031cf67ea9?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=400&h=300&fit=crop"
+            ]
+        },
+        "day6-6": {
+            title: "Day 6: Starfish at Pingwe + Paje Beach",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Your day starts with a 9:00 AM hotel pickup and a scenic drive to Pingwe, where you'll have the chance to see beautiful starfish in their natural shallow-water habitat during low tide. Enjoy the peaceful surroundings, take memorable photos, and learn about the local marine ecosystem while respecting the wildlife. Continue to Paje Beach, one of Zanzibar's most stunning beaches, famous for its white sand, turquoise waters, and laid-back atmosphere. Relax on the beach, swim in the warm Indian Ocean, or simply enjoy the breathtaking coastal views before returning to your hotel.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=400&h=300&fit=crop"
+            ]
+        },
+        "day1-5": {
+            title: "Day 1: Mnemba Island, Nungwi Beach & Sunset Cruise",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Your day begins with a hotel pickup and a transfer for your Mnemba Island excursion, with a chance to spot dolphins along the way. Snorkel in crystal-clear waters among vibrant coral reefs, then relax on Nungwi Beach, known for its soft white sand and laid-back atmosphere. As the afternoon winds down, board a traditional dhow for a magical sunset cruise along Zanzibar's coastline before returning to your hotel.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=400&h=300&fit=crop"
+            ]
+        },
+        "day2-5": {
+            title: "Day 2: Spice Farm, Prison Island & Stone Town",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Discover Zanzibar's famous spices on a guided Spice Farm tour, with fresh fruit tasting along the way. Continue to Prison Island by boat to meet the giant Aldabra tortoises and learn about the island's history. End the day with a Stone Town Walking Tour through the Old Fort, House of Wonders, local markets, and the narrow historic streets of this UNESCO World Heritage Site.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1590549413563-9e9e700d7cb9?w=400&h=300&fit=crop"
+            ]
+        },
+        "day3-5": {
+            title: "Day 3: Jozani Forest, Salaam Cave, Mtende Beach & The Rock",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Visit Jozani Forest to spot the rare Zanzibar Red Colobus Monkeys along a peaceful mangrove boardwalk. Continue to Salaam Cave for a swim in crystal-clear natural water and a chance to meet friendly sea turtles. Relax on the stunning white sands of Mtende Beach, one of Zanzibar's most beautiful stretches of coastline, before finishing at the iconic The Rock Restaurant for spectacular ocean views.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1542406775-5c7fea9b9d3b?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=400&h=300&fit=crop"
+            ]
+        },
+        "day1-4": {
+            title: "Day 1: Spice Farm, Prison Island, Nakupenda Sandbank, Stone Town & Night Food Market",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Start with a visit to a Spice Farm to learn about Zanzibar's famous spices, then head to Prison Island to meet the giant tortoises. Relax and swim at the beautiful Nakupenda Sandbank before exploring the history and culture of Stone Town. Wrap up the day with local food and lively atmosphere at the Stone Town Night Food Market.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1558980664-3a031cf67ea9?w=400&h=300&fit=crop"
+            ]
+        },
+        "day2-4": {
+            title: "Day 2: Mnemba Island, Sea Turtles, Kendwa Beach & Sunset Cruise",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Enjoy a snorkeling and marine life experience at Mnemba Island, then visit the sea turtles for a swim alongside them. Relax at Kendwa Beach, one of Zanzibar's most scenic stretches of coastline, and end the day with a beautiful sunset cruise along the coast.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop"
+            ]
+        },
+        "day1-3": {
+            title: "Day 1: Jozani Forest + Salaam Cave + The Rock",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Start your Zanzibar journey by exploring the beautiful Jozani Forest, home to the rare Zanzibar Red Colobus Monkeys and a peaceful mangrove boardwalk. Continue to the stunning Salaam Cave, where you can swim in crystal-clear natural water, relax in a peaceful setting, and even feed friendly turtles. End the day at the iconic The Rock Restaurant, one of Zanzibar's most famous landmarks, where you can enjoy breathtaking ocean views and capture unforgettable photos while tasting delicious seafood (meal optional).</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1542406775-5c7fea9b9d3b?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=400&h=300&fit=crop"
+            ]
+        },
+        "day2-3": {
+            title: "Day 2: Mnemba Island — Swimming with Dolphins",
+            meta: "Duration: full day | Pick-up: 8:30 AM",
+            desc: `<p>Enjoy an unforgettable ocean experience at Mnemba Island, one of Zanzibar's top snorkeling destinations. Start the day with the chance to see and swim alongside wild dolphins in their natural habitat. Continue with snorkeling in the crystal-clear turquoise waters, where you'll discover colorful coral reefs and tropical fish. Relax on the beautiful sandbank (tide permitting), swim in the warm Indian Ocean, and enjoy fresh tropical fruits before returning to your hotel.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=400&h=300&fit=crop"
+            ]
+        },
+        "day3-3": {
+            title: "Day 3: Spice Farm + Prison Island + Stone Town",
+            meta: "Duration: full day | Pick-up: 9:00 AM",
+            desc: `<p>Experience the rich culture and history of Zanzibar on this full-day tour. Begin at the Spice Farm, where you'll discover why Zanzibar is known as the "Spice Island" by seeing, smelling, and tasting fresh tropical spices and fruits. Next, take a boat trip to Prison Island to meet the famous giant Aldabra tortoises and learn about the island's fascinating history. End your journey with a guided Stone Town Walking Tour, exploring narrow streets, historic buildings, local markets, and the vibrant culture of Zanzibar's UNESCO World Heritage Site.</p>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1590549413563-9e9e700d7cb9?w=400&h=300&fit=crop"
+            ]
+        },
+        "mikumi": {
+            title: "Mikumi National Park Safari",
+            meta: "Duration: full day | Flight departs: 06:30 or 07:00",
+            desc: `<p>Fly from Zanzibar direct to Mikumi, where you'll meet your safari guide at the park for a short briefing before setting off. The morning safari begins at 07:20, followed by a lunch break at 12:30 and an afternoon safari at 13:30. The return flight to Zanzibar departs at 15:00, arriving back around 15:45.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Flight round trip</li>
+                            <li><i class="fas fa-check-circle"></i> Entrance fees</li>
+                            <li><i class="fas fa-check-circle"></i> Open jeep</li>
+                            <li><i class="fas fa-check-circle"></i> Lunch and soft drinks</li>
+                        </ul>`,
+            extraImages: [
+                "https://images.unsplash.com/photo-1549366021-9f761d450615?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=400&h=300&fit=crop"
+            ]
+        }
+    };
+
+    // =============================================
+    // PACKAGE MODAL
+    // =============================================
+    const packageModal = document.getElementById("packageModal");
+    const packageModalBody = document.getElementById("packageModalBody");
+    const packageModalClose = document.getElementById("packageModalClose");
+    const whatsappNumber = "255711322064";
+
+    document.querySelectorAll(".package-more").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const key = btn.getAttribute("data-package");
+            const data = packageData[key];
+            if (!data) return;
+
+            let extraImagesHtml = "";
+            if (data.extraImages && data.extraImages.length > 0) {
+                extraImagesHtml = `
+                            <div class="modal-extra-images">
+                                <h4><i class="fas fa-images"></i> More from this experience</h4>
+                                <div class="extra-images-scroll">
+                                    ${data.extraImages.map(img => `<img src="${img}" alt="Extra view" loading="lazy" />`).join("")}
+                                </div>
+                            </div>
+                        `;
+            }
+
+            const whatsappLink =
+                `https://wa.me/${whatsappNumber}?text=Hi%20Acheda%20Zanzibar%20Tours%2C%20I'm%20interested%20in%20the%20package%3A%20${encodeURIComponent(data.title)}`;
+
+            packageModalBody.innerHTML = `
+                        <h2>${data.title}</h2>
+                        <div class="package-meta"><i class="far fa-clock"></i> ${data.meta}</div>
+                        <div class="package-full-desc">${data.desc}</div>
+                        <div class="package-inclusive-note">
+                            <i class="fas fa-gem"></i> <strong>One-time payment covers everything:</strong> transport, meals, entry fees, and expert guide – no hidden costs!
+                        </div>
+                        ${extraImagesHtml}
+                        <a href="${whatsappLink}" target="_blank" class="modal-whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Book Now via WhatsApp
+                        </a>
+                    `;
+
+            packageModal.classList.add("active");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    packageModalClose.addEventListener("click", () => {
+        packageModal.classList.remove("active");
+        document.body.style.overflow = "";
+    });
+    packageModal.querySelector(".modal-overlay").addEventListener("click", () => {
+        packageModal.classList.remove("active");
+        document.body.style.overflow = "";
+    });
+
+    // =============================================
+    // TESTIMONIALS CAROUSEL
+    // =============================================
+    const track = document.getElementById("testimonialsTrack");
+    const slides = track.querySelectorAll(".testimonial-slide");
+    const prevBtn = document.getElementById("carouselPrev");
+    const nextBtn = document.getElementById("carouselNext");
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    });
+
+    let autoPlay = setInterval(() => nextBtn.click(), 5000);
+    const carouselContainer = document.querySelector(".testimonials-carousel");
+    carouselContainer.addEventListener("mouseenter", () => clearInterval(autoPlay));
+    carouselContainer.addEventListener("mouseleave", () => {
+        autoPlay = setInterval(() => nextBtn.click(), 5000);
+    });
+
+    // =============================================
+    // CONTACT FORM
+    // =============================================
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Thank you for your message! We will get back to you soon.");
+        e.target.reset();
+    });
+
+    // =============================================
+    // GOOGLE TRANSLATE — WORKING IMPLEMENTATION
+    // =============================================
+    const gtBarWrapper = document.getElementById("gtBarWrapper");
+    const gtLangLabel = document.getElementById("gtLangLabel");
+    const gtCloseBtn = document.getElementById("gtCloseBtn");
+    const translateBtn = document.getElementById("translateBtn");
+    const translateDropdown = document.getElementById("translateDropdown");
+    const langButtons = translateDropdown.querySelectorAll("button");
+
+    // Language names for display
+    const langNames = {
+        en: "English",
+        fr: "Français",
+        de: "Deutsch"
+    };
+
+    // Current language (default: en)
+    let currentLang = "en";
+
+    // Function to show the Google Translate bar
+    function showTranslateBar(lang) {
+        // Set the language label
+        gtLangLabel.textContent = langNames[lang] || "English";
+        // Show the bar
+        gtBarWrapper.classList.add("active");
+        // Scroll to top to show the bar
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // Function to hide the Google Translate bar
+    function hideTranslateBar() {
+        gtBarWrapper.classList.remove("active");
+        // Reset to English
+        switchLanguage("en");
+    }
+
+    // Function to trigger Google Translate via cookie (most reliable method)
+    function switchLanguage(lang) {
+        // Set the cookie for Google Translate
+        // googtrans = /en/fr  or /en/de  or /en/en (for original)
+        let cookieValue = "";
+        if (lang === "en") {
+            cookieValue = ""; // empty = original
+        } else {
+            cookieValue = "/en/" + lang;
+        }
+        document.cookie = "googtrans=" + cookieValue + "; path=/";
+        // Also set the domain cookie for better compatibility
+        document.cookie = "googtrans=" + cookieValue + "; path=/; domain=" + window.location.hostname;
+
+        // Reload the page to apply translation
+        window.location.reload();
+    }
+
+    // On page load, check if translation is active
+    function checkTranslationStatus() {
+        const cookies = document.cookie.split(";");
+        let foundLang = "en";
+        cookies.forEach(c => {
+            if (c.trim().startsWith("googtrans=")) {
+                const val = c.split("=")[1];
+                if (val && val.startsWith("/en/")) {
+                    const parts = val.split("/");
+                    if (parts.length >= 3) {
+                        foundLang = parts[2];
+                    }
+                } else if (val === "") {
+                    foundLang = "en";
+                }
+            }
+        });
+
+        // Update active state in dropdown
+        langButtons.forEach(b => {
+            b.classList.toggle("active-lang", b.getAttribute("data-lang") === foundLang);
+        });
+
+        // If translation is active (not English), show the bar
+        if (foundLang !== "en") {
+            currentLang = foundLang;
+            showTranslateBar(foundLang);
+        } else {
+            gtBarWrapper.classList.remove("active");
+        }
+
+        // Also check if Google Translate has been applied via other means
+        // Look for the .goog-te-banner-frame or .skiptranslate
+        setTimeout(() => {
+            const gtFrame = document.querySelector(".goog-te-banner-frame");
+            if (gtFrame && gtFrame.style.display !== "none") {
+                // Translation is active
+                if (currentLang === "en") {
+                    // Try to detect language from the page
+                    const htmlLang = document.documentElement.lang || "en";
+                    if (htmlLang !== "en") {
+                        currentLang = htmlLang;
+                        showTranslateBar(htmlLang);
+                        langButtons.forEach(b => {
+                            b.classList.toggle("active-lang", b.getAttribute("data-lang") === htmlLang);
+                        });
+                    }
+                }
+            }
+        }, 1000);
+    }
+
+    // =============================================
+    // TRANSLATE BUTTON & DROPDOWN EVENTS
+    // =============================================
+
+    // Toggle dropdown on translate button click
+    translateBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        translateDropdown.classList.toggle("open");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest("#translateBtn") && !e.target.closest(".translate-dropdown")) {
+            translateDropdown.classList.remove("open");
+        }
+    });
+
+    // Language selection
+    langButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const lang = btn.getAttribute("data-lang");
+
+            // Update active state
+            langButtons.forEach(b => b.classList.remove("active-lang"));
+            btn.classList.add("active-lang");
+
+            // Close dropdown
+            translateDropdown.classList.remove("open");
+
+            // If the language is English, hide the bar and reset
+            if (lang === "en") {
+                // Remove the cookie and reload to original
+                document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                document.cookie = "googtrans=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                window.location.reload();
+                return;
+            }
+
+            // For other languages, trigger translation via cookie reload
+            switchLanguage(lang);
+        });
+    });
+
+    // Close bar button
+    gtCloseBtn.addEventListener("click", () => {
+        // Remove translation cookie and reload to English
+        document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        document.cookie = "googtrans=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        window.location.reload();
+    });
+
+    // =============================================
+    // GOOGLE TRANSLATE INITIALIZATION
+    // =============================================
+    // This function is called by the Google Translate script
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,fr,de',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+
+        // After init, check the translation status
+        setTimeout(checkTranslationStatus, 500);
+    }
+
+    // If the script loads but the function is not called, we call it manually
+    // But the script tag with the callback should handle it.
+
+    // Also check status after full page load
+    window.addEventListener("load", () => {
+        setTimeout(checkTranslationStatus, 1000);
+    });
+
+    // =============================================
+    // FALLBACK: Manual translation trigger
+    // =============================================
+    // Sometimes the cookie method doesn't work on first visit,
+    // so we also try to use the Google Translate dropdown programmatically
+    function triggerGoogleTranslate(lang) {
+        const select = document.querySelector(".goog-te-combo");
+        if (select) {
+            select.value = lang;
+            select.dispatchEvent(new Event("change"));
+            return true;
+        }
+        return false;
+    }
+
+    // If cookie method fails, we can try this as a fallback
+    // But the cookie + reload method is the most reliable.
+    // We'll keep this for reference.
+    console.log("Acheda Zanzibar Tours — Google Translate ready.");
+</script>
+
+<!-- =============================================
+GOOGLE TRANSLATE SCRIPT
+============================================= -->
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
