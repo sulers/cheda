@@ -1,0 +1,19 @@
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCNyWFAINM_L2k9-sM3wnuWYjlEDVoXjE0",
+    authDomain: "acheda-zanzibar-tours.firebaseapp.com",
+    projectId: "acheda-zanzibar-tours",
+    storageBucket: "acheda-zanzibar-tours.firebasestorage.app",
+    messagingSenderId: "178711140763",
+    appId: "1:178711140763:web:108863107e2457f8eca93e"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
