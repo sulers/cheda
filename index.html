@@ -22,7 +22,7 @@
 
     <style>
       /* =============================================
-                   ROOT & RESET (unchanged)
+                   ROOT & RESET
                    ============================================= */
       * {
         margin: 0;
@@ -209,18 +209,6 @@
         box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
       }
 
-      .btn-tripadvisor {
-        background: #34e0a1;
-        color: var(--blue-deep);
-        font-weight: 600;
-        box-shadow: 0 4px 16px rgba(52, 224, 161, 0.3);
-      }
-      .btn-tripadvisor:hover {
-        background: #28c98f;
-        transform: translateY(-3px);
-        box-shadow: 0 12px 32px rgba(52, 224, 161, 0.4);
-      }
-
       /* =============================================
                    NAVIGATION
                    ============================================= */
@@ -322,7 +310,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: url("./images/100.jpeg") center/cover no-repeat;
+        background: url("./images/1.jpg") center/cover no-repeat;
         text-align: center;
         padding: 140px 28px 80px;
         overflow: hidden;
@@ -525,7 +513,7 @@
       }
 
       /* =============================================
-                   INCLUDES BADGE (static – shown globally)
+                   INCLUDES BADGE
                    ============================================= */
       .includes-section {
         background: var(--white);
@@ -590,7 +578,7 @@
       }
 
       /* =============================================
-                   PACKAGE CARDS (unchanged)
+                   PACKAGE CARDS
                    ============================================= */
       .packages-grid {
         display: grid;
@@ -664,7 +652,6 @@
         z-index: 2;
         border: 1px solid rgba(255, 255, 255, 0.15);
       }
-      /* tag variants */
       .package-tag.popular {
         background: #e74c3c;
       }
@@ -1008,7 +995,7 @@
       }
 
       /* =============================================
-                   STICKY BUTTONS
+                   STICKY BUTTONS (WhatsApp + Translate)
                    ============================================= */
       .sticky-buttons {
         position: fixed;
@@ -1104,7 +1091,7 @@
       }
 
       /* =============================================
-                   GOOGLE TRANSLATE WIDGET
+                   GOOGLE TRANSLATE WIDGET (visible bar at top)
                    ============================================= */
       .gt-bar-wrapper {
         position: fixed;
@@ -1153,6 +1140,7 @@
         color: var(--gray-700);
       }
 
+      /* Hide the default Google Translate widget bar */
       .goog-te-gadget {
         font-family: "Inter", sans-serif !important;
       }
@@ -1169,6 +1157,7 @@
         color: var(--blue-primary) !important;
       }
 
+      /* Hide the Google Translate banner that appears at the top */
       .goog-te-banner-frame {
         display: none !important;
       }
@@ -1631,7 +1620,9 @@
     </style>
   </head>
   <body>
-    <!-- ===== GOOGLE TRANSLATE BAR ===== -->
+    <!-- =============================================
+    GOOGLE TRANSLATE BAR (hidden initially)
+    ============================================= -->
     <div class="gt-bar-wrapper" id="gtBarWrapper">
       <span class="gt-label"
         ><i class="fas fa-globe"></i>
@@ -1648,7 +1639,7 @@
       <div class="nav-container">
         <a href="#" class="nav-logo">
           <img
-            src="./images/logo.jpeg"
+            src="./images/logo.jpg"
             alt="Acheda Zanzibar Tours logo"
             class="nav-logo-img"
           />
@@ -1663,11 +1654,11 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#packages" class="nav-link">Packages</a></li>
+          <li><a href="#packages-6" class="nav-link">Packages</a></li>
+          <li><a href="#transport" class="nav-link">Transport</a></li>
           <li>
             <a href="gallery.html" class="nav-link">Moments in Zanzibar</a>
           </li>
-          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </div>
@@ -1688,7 +1679,7 @@
           dream island escape begins here.
         </p>
         <div class="hero-actions">
-          <a href="#packages" class="btn btn-primary"
+          <a href="#packages-6" class="btn btn-primary"
             ><i class="fas fa-compass"></i> Explore Packages</a
           >
           <a href="#contact" class="btn btn-secondary"
@@ -1750,13 +1741,13 @@
                 <span>Flexible Itineraries</span>
               </div>
             </div>
-            <a href="#packages" class="btn btn-primary"
+            <a href="#packages-6" class="btn btn-primary"
               ><i class="fas fa-umbrella-beach"></i> View Our Packages</a
             >
           </div>
           <div class="about-image">
             <img
-              src="./images/11.jpeg"
+              src="./images/11.jpg"
               alt="Zanzibar beach and dhow"
               loading="lazy"
             />
@@ -1765,23 +1756,20 @@
       </div>
     </section>
 
-    <!-- ================================================================
-         DYNAMIC PACKAGES SECTION – all content pulled from Firestore
-         ================================================================ -->
-    <section class="section-spacing bg-light" id="packages">
+    <!-- ===== 6 DAYS PACKAGES ===== -->
+    <section class="section-spacing bg-light" id="packages-6">
       <div class="container">
         <div class="section-label">
           <i class="fas fa-umbrella-beach"></i> Packages
         </div>
         <h2 class="section-title">
-          Our <span class="highlight">Island Tours</span>
+          6 Days <span class="highlight">Island Tour</span>
         </h2>
         <p class="section-subtitle">
-          Choose your perfect Zanzibar adventure – all packages include our
-          signature all‑inclusive care
+          Experience the very best of Zanzibar over six unforgettable days
         </p>
 
-        <!-- Global includes box (static) -->
+        <!-- INCLUDES -->
         <div class="includes-section">
           <h3>
             <i
@@ -1825,115 +1813,909 @@
           </p>
         </div>
 
-        <!-- Container where JavaScript will render each tour group -->
-        <div id="dynamicPackageSections"></div>
+        <div class="packages-grid">
+          <!-- Day 1 -->
+          <div class="package-card" data-package="day1-6">
+            <div class="package-image">
+              <img
+                src="./images/1.jpg"
+                alt="Spice Farm"
+                loading="lazy"
+                data-img-key="day1-6"
+              />
+              <span class="package-day">Day 1</span>
+              <span class="package-tag popular">Most Popular</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Spice Farm + Prison Island + Stone Town
+              </h3>
+              <p class="package-desc">
+                Discover Zanzibar's famous spices, meet giant tortoises, and
+                wander the historic streets of Stone Town.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day1-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Day 2 -->
+          <div class="package-card" data-package="day2-6">
+            <div class="package-image">
+              <img
+                src="./images/2.jpg"
+                alt="Mnemba Island"
+                loading="lazy"
+                data-img-key="day2-6"
+              />
+              <span class="package-day">Day 2</span>
+              <span class="package-tag couples">Best for Couples</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Mnemba Island &amp; Sunset Cruise</h3>
+              <p class="package-desc">
+                Snorkel crystal-clear waters, swim with dolphins, and enjoy a
+                magical sunset cruise at Kendwa Beach.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day2-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Day 3 -->
+          <div class="package-card" data-package="day3-6">
+            <div class="package-image">
+              <img
+                src="./images/3.jpg"
+                alt="Jozani Forest"
+                loading="lazy"
+                data-img-key="day3-6"
+              />
+              <span class="package-day">Day 3</span>
+              <span class="package-tag adventure">Adventure</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Jozani Forest + Salaam Cave + The Rock
+              </h3>
+              <p class="package-desc">
+                Spot rare red colobus monkeys, swim in natural cave pools, and
+                dine at Zanzibar's iconic Rock Restaurant.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day3-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Day 4 -->
+          <div class="package-card" data-package="day4-6">
+            <div class="package-image">
+              <img
+                src="./images/4.jpg"
+                alt="Safari Blue"
+                loading="lazy"
+                data-img-key="day4-6"
+              />
+              <span class="package-day">Day 4</span>
+              <span class="package-tag value">Best Value</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Safari Blue</h3>
+              <p class="package-desc">
+                Sail on a traditional dhow, snorkel vibrant reefs, and enjoy a
+                seafood barbecue on a pristine sandbank.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day4-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Day 5 -->
+          <div class="package-card" data-package="day5-6">
+            <div class="package-image">
+              <img
+                src="./images/5.jpg"
+                alt="Cooking class"
+                loading="lazy"
+                data-img-key="day5-6"
+              />
+              <span class="package-day">Day 5</span>
+              <span class="package-tag cultural">Cultural</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Village Visit &amp; Cooking Class</h3>
+              <p class="package-desc">
+                Immerse yourself in local culture, visit a traditional village,
+                and learn to cook authentic Zanzibari dishes.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day5-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Day 6 -->
+          <div class="package-card" data-package="day6-6">
+            <div class="package-image">
+              <img
+                src="./images/6.jpg"
+                alt="Paje Beach"
+                loading="lazy"
+                data-img-key="day6-6"
+              />
+              <span class="package-day">Day 6</span>
+              <span class="package-tag relax">Relaxation</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Starfish at Pingwe + Paje Beach</h3>
+              <p class="package-desc">
+                See beautiful starfish in their natural habitat and relax on the
+                stunning white sands of Paje Beach.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day6-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="pricing-table">
+          <h4><i class="fas fa-tag"></i> 6 Days Package – Pricing</h4>
+          <div class="pricing-grid">
+            <div class="pricing-item">
+              <span class="pricing-label">1 person</span
+              ><span class="pricing-amount" data-price-key="6days-1">$800</span
+              ><span class="pricing-note">per person</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">2 people</span
+              ><span class="pricing-amount" data-price-key="6days-2">$480</span
+              ><span class="pricing-note">per person</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">2–5 people</span
+              ><span class="pricing-amount" data-price-key="6days-2-5"
+                >$420</span
+              ><span class="pricing-note">per person</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">5–10 people</span
+              ><span class="pricing-amount" data-price-key="6days-5-10"
+                >$350</span
+              ><span class="pricing-note">per person</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ===== TESTIMONIALS ===== -->
-    <section class="section-spacing bg-white" id="testimonials">
+    <!-- ===== 5 DAYS PACKAGES ===== -->
+    <section class="section-spacing bg-white" id="packages-5">
       <div class="container">
         <div class="section-label">
-          <i class="fas fa-star"></i> Testimonials
+          <i class="fas fa-umbrella-beach"></i> Packages
         </div>
         <h2 class="section-title">
-          What Our <span class="highlight">Travelers Say</span>
+          5 Days <span class="highlight">Island Tour</span>
         </h2>
         <p class="section-subtitle">
-          Real stories from real people who explored Zanzibar with us
+          Day 1 for airport pickup and drop off, day 5 for departure transfer. A
+          well-rounded island escape combining beaches, marine life, and
+          culture.
         </p>
 
-        <div class="testimonials-carousel" id="testimonialsCarousel">
-          <div class="testimonials-track" id="testimonialsTrack">
-            <div class="testimonial-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">
-                  "When asking for advice via social media, you are inundated
-                  with tour guides promoting themselves. We contacted a handful.
-                  The reason we chose Acheda, was because he was not pushy. His
-                  prices seemed the average going rate. I also asked about
-                  numerous other things before arriving (for example weather on
-                  the island) he took photos of the sky every day, and sent them
-                  to me without request, just to put my mind at ease. It was
-                  then I knew we'd found our person. Acheda is a young &amp;
-                  ambitious gentleman. He's worked very hard to get a good job
-                  in Zanzibar, at such a young age."
-                </p>
-                <div class="testimonial-author">
-                  <div
-                    class="testimonial-avatar"
-                    style="background: var(--blue-primary)"
-                  >
-                    SW
-                  </div>
-                  <div><strong>Sarah W.</strong><span>TripAdvisor</span></div>
-                </div>
-              </div>
+        <div class="packages-grid">
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/7.jpg"
+                alt="Airport Transfer"
+                loading="lazy"
+                data-img-key="airport-arrival-5"
+              />
+              <span class="package-day">Day 1</span>
+              <span class="package-tag welcome">Welcome</span>
             </div>
-            <div class="testimonial-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">
-                  "Acheda and his team are by far the best tour guides in
-                  Zanzibar, Acheda is very knowledgeable and always goes the
-                  extra mile. My family and I really enjoyed our time in
-                  Zanzibar and it is all thanks to Acheda. Highly recommended!"
-                </p>
-                <div class="testimonial-author">
-                  <div
-                    class="testimonial-avatar"
-                    style="background: var(--orange)"
-                  >
-                    GW
-                  </div>
-                  <div>
-                    <strong>Getaway48857638034</strong><span>TripAdvisor</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">
-                  "We had an amazing experience with Acheda! He took us to the
-                  Spice Farm and Stone Town, and both tours were incredibly
-                  interesting and well organized."
-                </p>
-                <div class="testimonial-author">
-                  <div class="testimonial-avatar" style="background: #2c7a7a">
-                    HM
-                  </div>
-                  <div><strong>H M</strong><span>TripAdvisor</span></div>
-                </div>
-              </div>
+            <div class="package-body">
+              <h3 class="package-title">Airport Pickup &amp; Hotel Transfer</h3>
+              <p class="package-desc">
+                Before an unforgettable Zanzibar adventure, enjoy a comfortable
+                transfer from the airport to your hotel.
+              </p>
             </div>
           </div>
-          <button class="carousel-btn carousel-prev" id="carouselPrev">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="carousel-btn carousel-next" id="carouselNext">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+          <div class="package-card" data-package="day1-5">
+            <div class="package-image">
+              <img
+                src="./images/8.jpg"
+                alt="Mnemba Island"
+                loading="lazy"
+                data-img-key="day1-5"
+              />
+              <span class="package-day">Day 2</span>
+              <span class="package-tag couples">Best for Couples</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Mnemba Island, Nungwi Beach &amp; Sunset Cruise
+              </h3>
+              <p class="package-desc">
+                Enjoy dolphin spotting, snorkeling, beach relaxation at Nungwi,
+                and a magical sunset dhow cruise.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day1-5"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="package-card" data-package="day2-5">
+            <div class="package-image">
+              <img
+                src="./images/9.jpg"
+                alt="Spice Farm"
+                loading="lazy"
+                data-img-key="day2-5"
+              />
+              <span class="package-day">Day 3</span>
+              <span class="package-tag popular">Most Popular</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Spice Farm, Prison Island &amp; Stone Town
+              </h3>
+              <p class="package-desc">
+                Discover Zanzibar's famous spices, visit the giant tortoises,
+                and explore the rich history of Stone Town.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day2-5"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="package-card" data-package="day3-5">
+            <div class="package-image">
+              <img
+                src="./images/10.jpg"
+                alt="Jozani Forest"
+                loading="lazy"
+                data-img-key="day3-5"
+              />
+              <span class="package-day">Day 4</span>
+              <span class="package-tag adventure">Adventure</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Jozani Forest, Salaam Cave, Mtende Beach &amp; The Rock
+              </h3>
+              <p class="package-desc">
+                Meet the red colobus monkeys, swim with sea turtles, visit one
+                of Zanzibar's most beautiful beaches, and stop at the iconic
+                Rock Restaurant.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day3-5"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/11.jpg"
+                alt="Airport Transfer"
+                loading="lazy"
+                data-img-key="airport-departure-5"
+              />
+              <span class="package-day">Day 5</span>
+              <span class="package-tag departure">Departure</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Departure Transfer</h3>
+              <p class="package-desc">
+                After an unforgettable Zanzibar adventure, enjoy a comfortable
+                transfer to the airport for your departure.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="testimonials-cta">
-          <a href="#" target="_blank" class="btn btn-tripadvisor"
-            ><i class="fab fa-tripadvisor"></i> See More Reviews</a
-          >
+        <div class="pricing-table">
+          <h4><i class="fas fa-tag"></i> 5 Days Package – Pricing</h4>
+          <div class="pricing-grid">
+            <div class="pricing-item">
+              <span class="pricing-label">1 person</span
+              ><span class="pricing-amount" data-price-key="5days-1">$720</span
+              ><span class="pricing-note">per person</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">2 people</span
+              ><span class="pricing-amount" data-price-key="5days-2">$550</span
+              ><span class="pricing-note">per person</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">3–6 people</span
+              ><span class="pricing-amount" data-price-key="5days-3-6"
+                >$400</span
+              ><span class="pricing-note">per person</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4 DAYS PACKAGES ===== -->
+    <section class="section-spacing bg-light" id="packages-4">
+      <div class="container">
+        <div class="section-label">
+          <i class="fas fa-umbrella-beach"></i> Packages
+        </div>
+        <h2 class="section-title">
+          4 Days <span class="highlight">Island Tour</span>
+        </h2>
+        <p class="section-subtitle">
+          A quick but complete taste of Zanzibar's beaches, culture, and cuisine
+        </p>
+
+        <div class="packages-grid">
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/12.jpg"
+                alt="Airport Transfer"
+                loading="lazy"
+                data-img-key="airport-arrival-4"
+              />
+              <span class="package-day">Day 1</span>
+              <span class="package-tag welcome">Welcome</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Airport Pickup &amp; Hotel Transfer</h3>
+              <p class="package-desc">
+                Before an unforgettable Zanzibar adventure, enjoy a comfortable
+                transfer from the airport to your hotel.
+              </p>
+            </div>
+          </div>
+          <div class="package-card" data-package="day1-4">
+            <div class="package-image">
+              <img
+                src="./images/13.jpg"
+                alt="Spice Farm"
+                loading="lazy"
+                data-img-key="day1-4"
+              />
+              <span class="package-day">Day 2</span>
+              <span class="package-tag popular">Most Popular</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Spice Farm, Prison Island, Nakupenda, Stone Town &amp; Night
+                Market
+              </h3>
+              <p class="package-desc">
+                Visit a Spice Farm, meet giant tortoises, relax at Nakupenda
+                Sandbank, explore Stone Town, and enjoy the Night Food Market.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day1-4"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="package-card" data-package="day2-4">
+            <div class="package-image">
+              <img
+                src="./images/14.jpg"
+                alt="Mnemba Island"
+                loading="lazy"
+                data-img-key="day2-4"
+              />
+              <span class="package-day">Day 3</span>
+              <span class="package-tag couples">Best for Couples</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Mnemba Island, Sea Turtles, Kendwa Beach &amp; Sunset Cruise
+              </h3>
+              <p class="package-desc">
+                Snorkel and explore marine life at Mnemba Island, swim with sea
+                turtles, relax at Kendwa Beach, and end with a sunset cruise.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day2-4"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/15.jpg"
+                alt="Airport Transfer"
+                loading="lazy"
+                data-img-key="airport-departure-4"
+              />
+              <span class="package-day">Day 4</span>
+              <span class="package-tag departure">Departure</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Departure Transfer</h3>
+              <p class="package-desc">
+                After an unforgettable Zanzibar adventure, enjoy a comfortable
+                transfer to the airport for your departure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-table">
+          <h4><i class="fas fa-tag"></i> 4 Days Package – Pricing</h4>
+          <div class="pricing-grid">
+            <div class="pricing-item">
+              <span class="pricing-label">1 person</span
+              ><span class="pricing-amount" data-price-key="4days-1">$520</span
+              ><span class="pricing-note">per person</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">2 people</span
+              ><span class="pricing-amount" data-price-key="4days-2">$290</span
+              ><span class="pricing-note">per person</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">2–5 people</span
+              ><span class="pricing-amount" data-price-key="4days-2-5"
+                >$250</span
+              ><span class="pricing-note">per person</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">5–10 people</span
+              ><span class="pricing-amount" data-price-key="4days-5-10"
+                >$220</span
+              ><span class="pricing-note">per person</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3 DAYS PACKAGES ===== -->
+    <section class="section-spacing bg-white" id="packages-3">
+      <div class="container">
+        <div class="section-label">
+          <i class="fas fa-umbrella-beach"></i> Packages
+        </div>
+        <h2 class="section-title">
+          3 Days <span class="highlight">Island Tour</span>
+        </h2>
+        <p class="section-subtitle">
+          A shorter escape packed with Zanzibar's most iconic experiences
+        </p>
+
+        <div class="packages-grid">
+          <div class="package-card" data-package="day1-3">
+            <div class="package-image">
+              <img
+                src="./images/16.jpg"
+                alt="Jozani Forest"
+                loading="lazy"
+                data-img-key="day1-3"
+              />
+              <span class="package-day">Day 1</span>
+              <span class="package-tag adventure">Adventure</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Jozani Forest + Salaam Cave + The Rock
+              </h3>
+              <p class="package-desc">
+                Explore the lush Jozani Forest, swim in Salaam Cave, and dine at
+                the iconic Rock Restaurant.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day1-3"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="package-card" data-package="day2-3">
+            <div class="package-image">
+              <img
+                src="./images/17.jpg"
+                alt="Mnemba Island"
+                loading="lazy"
+                data-img-key="day2-3"
+              />
+              <span class="package-day">Day 2</span>
+              <span class="package-tag couples">Best for Couples</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Mnemba Island – Swimming with Dolphins
+              </h3>
+              <p class="package-desc">
+                Swim alongside wild dolphins, snorkel vibrant coral reefs, and
+                relax on Mnemba's pristine sandbank.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day2-3"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="package-card" data-package="day3-3">
+            <div class="package-image">
+              <img
+                src="./images/18.jpg"
+                alt="Spice Farm"
+                loading="lazy"
+                data-img-key="day3-3"
+              />
+              <span class="package-day">Day 3</span>
+              <span class="package-tag popular">Most Popular</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Spice Farm + Prison Island + Stone Town
+              </h3>
+              <p class="package-desc">
+                Experience the Spice Island, visit Prison Island's tortoises,
+                and explore historic Stone Town.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day3-3"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-table">
+          <h4><i class="fas fa-tag"></i> 3 Days Package – Pricing</h4>
+          <div class="pricing-grid">
+            <div class="pricing-item">
+              <span class="pricing-label">1 person</span
+              ><span class="pricing-amount" data-price-key="3days-1">$490</span
+              ><span class="pricing-note">per person</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">2 people</span
+              ><span class="pricing-amount" data-price-key="3days-2">$320</span
+              ><span class="pricing-note">per person</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">3–6 people</span
+              ><span class="pricing-amount" data-price-key="3days-3-6"
+                >$250</span
+              ><span class="pricing-note">per person</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MIKUMI DAY TRIP ===== -->
+    <section class="section-spacing bg-light" id="mikumi-safari">
+      <div class="container">
+        <div class="section-label"><i class="fas fa-tree"></i> Safari</div>
+        <h2 class="section-title">
+          Mikumi <span class="highlight">Day Trip Safari</span>
+        </h2>
+        <p class="section-subtitle">
+          A fly-in safari day trip from Zanzibar to Mikumi National Park
+        </p>
+
+        <div class="packages-grid">
+          <div class="package-card" data-package="mikumi">
+            <div class="package-image">
+              <img
+                src="./images/19.jpg"
+                alt="Mikumi Safari"
+                loading="lazy"
+                data-img-key="mikumi"
+              />
+              <span class="package-day">Day Trip</span>
+              <span class="package-tag safari">Safari Special</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Mikumi National Park Safari</h3>
+              <p class="package-desc">
+                Fly round-trip from Zanzibar to Mikumi for a full day of game
+                drives in an open jeep, with lunch and soft drinks included.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="mikumi"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-table">
+          <h4><i class="fas fa-tag"></i> Mikumi Day Trip – Pricing</h4>
+          <div class="pricing-grid">
+            <div class="pricing-item">
+              <span class="pricing-label">Contact us</span
+              ><span class="pricing-amount" style="font-size: 1.2rem"
+                >for current pricing</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2 DAYS 1 NIGHT SAFARI ===== -->
+    <section class="section-spacing bg-white" id="packages-2d1n">
+      <div class="container">
+        <div class="section-label"><i class="fas fa-tree"></i> Safari</div>
+        <h2 class="section-title">
+          2 Days <span class="highlight">1 Night</span>
+        </h2>
+        <p class="section-subtitle">A 2-day escape for safari.</p>
+
+        <div class="packages-grid">
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/20.jpg"
+                alt="Safari Image"
+                loading="lazy"
+                data-img-key="safari2d1n-1"
+              />
+              <span class="package-day">Day 1</span>
+              <span class="package-tag safari">Safari</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Day 1</h3>
+              <p class="package-desc">
+                Morning Flight 06:15 – 07:05. Full day safari in private jeep.
+                Lunch, evening dinner, and overnight at Selous Safari Lodge.
+              </p>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/21.jpg"
+                alt="Safari Image"
+                loading="lazy"
+                data-img-key="safari2d1n-2"
+              />
+              <span class="package-day">Day 2</span>
+              <span class="package-tag safari">Safari</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Day 2</h3>
+              <p class="package-desc">
+                Boat safari, Maasai village visit. Afternoon flight back to
+                Zanzibar 16:00 – 17:10.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3 DAYS 2 NIGHT SAFARI ===== -->
+    <section class="section-spacing bg-light" id="packages-3d2n">
+      <div class="container">
+        <div class="section-label"><i class="fas fa-tree"></i> Safari</div>
+        <h2 class="section-title">
+          3 Days <span class="highlight">2 Nights</span>
+        </h2>
+        <p class="section-subtitle">A 3-day escape for safari.</p>
+
+        <div class="packages-grid">
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/22.jpg"
+                alt="Safari image"
+                loading="lazy"
+                data-img-key="safari3d2n-1"
+              />
+              <span class="package-day">Day 1</span>
+              <span class="package-tag safari">Safari</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Day 1</h3>
+              <p class="package-desc">
+                Flight to Serengeti. Overnight at Serengeti Safari Lodge /
+                Wildebeest.
+              </p>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/23.jpg"
+                alt="Safari image"
+                loading="lazy"
+                data-img-key="safari3d2n-2"
+              />
+              <span class="package-day">Day 2</span>
+              <span class="package-tag safari">Safari</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Day 2</h3>
+              <p class="package-desc">
+                Serengeti overnight: Serengeti Safari Lodge / Wildebeest.
+              </p>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/24.jpg"
+                alt="Safari image"
+                loading="lazy"
+                data-img-key="safari3d2n-3"
+              />
+              <span class="package-day">Day 3</span>
+              <span class="package-tag safari">Safari</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Day 3</h3>
+              <p class="package-desc">Ngorongoro + Departure to Kilimanjaro.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRANSPORT / AIRPORT TRANSFERS ===== -->
+    <section class="section-spacing bg-white" id="transport">
+      <div class="container">
+        <div class="section-label">
+          <i class="fas fa-shuttle-van"></i> Transport
+        </div>
+        <h2 class="section-title">
+          Airport <span class="highlight">Transfers</span>
+        </h2>
+        <p class="section-subtitle">
+          Comfortable, reliable private transfers between Zanzibar Airport and
+          every corner of the island
+        </p>
+
+        <div class="packages-grid">
+          <!-- NOTE: placeholder Unsplash images below - swap with your own transfer vehicle photos when ready -->
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/25.jpg"
+                alt="Airport transfer"
+                loading="lazy"
+                data-img-key="transport-1"
+              />
+              <span class="package-tag welcome">Door to Door</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Airport Pickup &amp; Drop Off</h3>
+              <p class="package-desc">
+                A comfortable private car meets you at the airport and takes you
+                straight to your hotel, anywhere on the island - and back again
+                for departure.
+              </p>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-image">
+              <img
+                src="./images/26.jpg"
+                alt="Full day private transfer"
+                loading="lazy"
+                data-img-key="transport-2"
+              />
+              <span class="package-tag premium">Flexible</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Full Day Private Transfer</h3>
+              <p class="package-desc">
+                Need a driver for the whole day? Book a private full-day
+                transfer to explore the island at your own pace.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-table">
+          <h4><i class="fas fa-route"></i> Transfer Routes &amp; Pricing</h4>
+          <div class="pricing-grid">
+            <div class="pricing-item">
+              <span class="pricing-label">Airport → Kendwa, Nungwi</span
+              ><span class="pricing-amount" data-price-key="transport-kendwa"
+                >$60</span
+              ><span class="pricing-note">per trip</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label"
+                >Airport → Matemwe, Kiwengwa, Pwani Mchangani</span
+              ><span class="pricing-amount" data-price-key="transport-matemwe"
+                >$60</span
+              ><span class="pricing-note">per trip</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">Airport → Pongwe, Uroa, Chwaka</span
+              ><span class="pricing-amount" data-price-key="transport-pongwe"
+                >$60</span
+              ><span class="pricing-note">per trip</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">Airport → Paje, Bwejuu, Jambiani</span
+              ><span class="pricing-amount" data-price-key="transport-paje"
+                >$60</span
+              ><span class="pricing-note">per trip</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label"
+                >Airport → Dongwe, Michamvi, Pingwe</span
+              ><span class="pricing-amount" data-price-key="transport-dongwe"
+                >$60</span
+              ><span class="pricing-note">per trip</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">Airport → Kizimkazi, Makunduchi</span
+              ><span class="pricing-amount" data-price-key="transport-kizimkazi"
+                >$60</span
+              ><span class="pricing-note">per trip</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">Airport → Fumba</span
+              ><span class="pricing-amount" data-price-key="transport-fumba"
+                >$50</span
+              ><span class="pricing-note">per trip</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">Airport → Stone Town</span
+              ><span class="pricing-amount" data-price-key="transport-stonetown"
+                >$20</span
+              ><span class="pricing-note">per trip</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-label">Full Day Transfer</span
+              ><span class="pricing-amount" data-price-key="transport-fullday"
+                >$100</span
+              ><span class="pricing-note">per day</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1956,6 +2738,15 @@
           title="Acheda Zanzibar Tours location on Shangani Street, Stone Town"
         >
         </iframe>
+        <div style="text-align: center; margin-top: 24px">
+          <a
+            href="https://share.google/RoqhshkF7pxmq6gz2"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline"
+            ><i class="fab fa-google"></i> View Our Google Listing</a
+          >
+        </div>
       </div>
     </section>
 
@@ -2023,7 +2814,10 @@
             </ul>
             <div class="contact-socials" style="margin-top: 12px">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1BsUhVgD3M/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
                 style="
                   background: rgba(255, 255, 255, 0.06);
                   color: rgba(255, 255, 255, 0.6);
@@ -2031,7 +2825,10 @@
                 ><i class="fab fa-facebook-f"></i
               ></a>
               <a
-                href="#"
+                href="https://www.instagram.com/acheda_zanzibar?igsh=azB6NXQ1MTc4YzBv&utm_source=qr"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
                 style="
                   background: rgba(255, 255, 255, 0.06);
                   color: rgba(255, 255, 255, 0.6);
@@ -2039,7 +2836,32 @@
                 ><i class="fab fa-instagram"></i
               ></a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@acheda_zanzibar?_r=1&_t=ZS-990za7EmJmf"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+                style="
+                  background: rgba(255, 255, 255, 0.06);
+                  color: rgba(255, 255, 255, 0.6);
+                "
+                ><i class="fab fa-tiktok"></i
+              ></a>
+              <a
+                href="https://youtube.com/@achedazanzibar?si=vr-HpMOSb9fzK6be"
+                target="_blank"
+                rel="noopener"
+                aria-label="YouTube"
+                style="
+                  background: rgba(255, 255, 255, 0.06);
+                  color: rgba(255, 255, 255, 0.6);
+                "
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://wa.me/255615311661"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
                 style="
                   background: rgba(255, 255, 255, 0.06);
                   color: rgba(255, 255, 255, 0.6);
@@ -2120,7 +2942,7 @@
           <div class="footer-brand">
             <a href="#" class="footer-logo">
               <img
-                src="./images/logo.jpeg"
+                src="./images/logo.jpg"
                 alt="Acheda Zanzibar Tours logo"
                 class="footer-logo-img"
               />
@@ -2134,7 +2956,9 @@
           <div class="footer-links">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#packages">All Packages</a></li>
+              <li><a href="#packages-6">6 Days Packages</a></li>
+              <li><a href="#packages-3">3 Days Packages</a></li>
+              <li><a href="#transport">Airport Transfers</a></li>
               <li><a href="#about">About Us</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -2151,13 +2975,39 @@
           <div class="footer-links">
             <h4>Follow Us</h4>
             <div class="contact-socials">
-              <a href="#" aria-label="Facebook"
+              <a
+                href="https://www.facebook.com/share/1BsUhVgD3M/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a href="#" aria-label="Instagram"
+              <a
+                href="https://www.instagram.com/acheda_zanzibar?igsh=azB6NXQ1MTc4YzBv&utm_source=qr"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="#" aria-label="WhatsApp"
+              <a
+                href="https://www.tiktok.com/@acheda_zanzibar?_r=1&_t=ZS-990za7EmJmf"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+              <a
+                href="https://youtube.com/@achedazanzibar?si=vr-HpMOSb9fzK6be"
+                target="_blank"
+                rel="noopener"
+                aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://wa.me/255615311661"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
                 ><i class="fab fa-whatsapp"></i
               ></a>
             </div>
@@ -2171,6 +3021,7 @@
 
     <!-- ===== STICKY BUTTONS ===== -->
     <div class="sticky-buttons">
+      <!-- Translate Button -->
       <div style="position: relative">
         <button
           class="sticky-btn sticky-btn-translate"
@@ -2187,6 +3038,7 @@
           <button data-lang="de"><i class="fas fa-flag"></i> Deutsch</button>
         </div>
       </div>
+      <!-- WhatsApp Button -->
       <a
         href="https://wa.me/255615311661?text=Hi%20Acheda%20Zanzibar%20Tours!%20I'm%20interested%20in%20your%20tours."
         target="_blank"
@@ -2197,7 +3049,7 @@
       </a>
     </div>
 
-    <!-- ===== MODAL ===== -->
+    <!-- ===== MODALS ===== -->
     <div class="modal" id="packageModal">
       <div class="modal-overlay"></div>
       <div class="modal-content modal-package-content" id="packageModalContent">
@@ -2208,10 +3060,446 @@
       </div>
     </div>
 
-    
-    <script type="module" src="./scripts/main.js"></script>
+    <!-- =============================================
+LIVE CONFIG (images + prices) - loaded from Firestore,
+falls back to sensible defaults if unavailable.
+============================================= -->
+    <script type="module">
+      import { loadMergedConfig } from "./site-config.js";
 
-    <!-- Google Translate script (external) -->
+      loadMergedConfig().then((config) => {
+        window.siteConfig = config;
+
+        // Apply chosen images to every card/extra image slot
+        document.querySelectorAll("[data-img-key]").forEach((img) => {
+          const key = img.getAttribute("data-img-key");
+          const num = config.images[key];
+          if (num) img.src = `./images/${num}.jpg`;
+        });
+
+        // Apply prices
+        document.querySelectorAll("[data-price-key]").forEach((el) => {
+          const key = el.getAttribute("data-price-key");
+          const amount = config.prices[key];
+          if (amount !== undefined) el.textContent = `$${amount}`;
+        });
+      });
+    </script>
+
+    <!-- =============================================
+JAVASCRIPT
+============================================= -->
+    <script>
+      // =============================================
+      // NAVBAR SCROLL
+      // =============================================
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 60);
+      });
+
+      // =============================================
+      // MOBILE MENU
+      // =============================================
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+      navToggle.addEventListener("click", () =>
+        navMenu.classList.toggle("open"),
+      );
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => navMenu.classList.remove("open"));
+      });
+
+      // =============================================
+      // PACKAGE DATA
+      // =============================================
+      const packageData = {
+        "day1-6": {
+          title: "Day 1: Spice Farm + Prison Island + Stone Town",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Your journey begins with a 9:00 AM hotel pickup. First, visit a traditional Spice Farm, where you'll discover Zanzibar's famous spices, tropical fruits, and medicinal plants while enjoying fresh fruit tasting. Next, head to Prison Island by boat to meet the giant Aldabra tortoises and learn about the island's fascinating history. Afterward, continue with a Stone Town Walking Tour, exploring the Old Slave Market, Darajani Market, Old Fort, House of Wonders, Freddie Mercury House, Forodhani Gardens, and the charming narrow streets filled with local culture and history. After an unforgettable day exploring the best of Zanzibar, you'll be transferred back to your hotel.</p>`,
+        },
+        "day2-6": {
+          title: "Day 2: Mnemba Island & Sunset Cruise at Kendwa Beach",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Your day begins with a 9:00 AM hotel pickup and a transfer to the departure point for your Mnemba Island excursion. Enjoy snorkeling in the crystal-clear waters, discover colorful coral reefs and tropical fish, relax on the beautiful sandbank (weather permitting), and keep an eye out for dolphins in their natural habitat. After your ocean adventure, you'll have time to relax before heading to Kendwa Beach for a magical Sunset Cruise. Sail along Zanzibar's stunning coastline, take in breathtaking sunset views, enjoy the refreshing sea breeze, and create unforgettable memories as the sun sets over the Indian Ocean. After the cruise, you'll be transferred back to your hotel.</p>`,
+        },
+        "day3-6": {
+          title: "Day 3: Jozani Forest + Salaam Cave + Mtende Beach + The Rock",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Your tour begins with a 9:00 AM hotel pickup and a drive to Jozani Forest, home to the rare Zanzibar Red Colobus Monkeys and a beautiful mangrove boardwalk. Next, visit Salaam Cave, where you can swim in crystal-clear natural water, feed sea turtles, and enjoy the peaceful surroundings. Continue to the stunning Mtende Beach, known for its white sand, turquoise water, and breathtaking coastal scenery. End your journey at the famous The Rock Restaurant, one of Zanzibar's most iconic dining spots, where you can admire spectacular ocean views and enjoy a delicious meal or refreshing drink (meal not included). After an unforgettable day exploring Zanzibar's nature and coastline, you'll be transferred back to your hotel.</p>`,
+        },
+        "day4-6": {
+          title: "Day 4: Safari Blue",
+          meta: "Duration: full day | Pick-up: 8:00 AM",
+          desc: `<p>Your adventure starts with a 8:00 AM hotel pickup and a transfer to Fumba, where you'll board a traditional wooden dhow for the famous Safari Blue excursion. Cruise across the crystal-clear waters of the Indian Ocean, snorkel among vibrant coral reefs, relax on a pristine sandbank, and swim in a natural lagoon surrounded by mangrove trees. Enjoy a freshly prepared seafood barbecue with tropical fruits and refreshing drinks while taking in the beauty of Zanzibar's coastline. This full-day experience offers the perfect combination of sailing, swimming, snorkeling, and relaxation before returning to your hotel with unforgettable memories.</p>`,
+        },
+        "day5-6": {
+          title: "Day 5: Village Visit & Cooking Class",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Your experience begins with a 9:00 AM hotel pickup and a warm welcome to a local village. Discover Zanzibar's rich culture as you explore traditional homes, meet friendly locals, and learn about their daily way of life. Then, join a hands-on cooking class where you'll prepare authentic Zanzibari dishes using fresh local ingredients and aromatic spices. After enjoying the delicious meal you've helped create, you'll have time to interact with the community and experience the true taste and traditions of Zanzibar before returning to your hotel.</p>`,
+        },
+        "day6-6": {
+          title: "Day 6: Starfish at Pingwe + Paje Beach",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Your day starts with a 9:00 AM hotel pickup and a scenic drive to Pingwe, where you'll have the chance to see beautiful starfish in their natural shallow-water habitat during low tide. Enjoy the peaceful surroundings, take memorable photos, and learn about the local marine ecosystem while respecting the wildlife. Continue to Paje Beach, one of Zanzibar's most stunning beaches, famous for its white sand, turquoise waters, and laid-back atmosphere. Relax on the beach, swim in the warm Indian Ocean, or simply enjoy the breathtaking coastal views before returning to your hotel.</p>`,
+        },
+        "day1-5": {
+          title: "Day 1: Mnemba Island, Nungwi Beach & Sunset Cruise",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Your day begins with a hotel pickup and a transfer for your Mnemba Island excursion, with a chance to spot dolphins along the way. Snorkel in crystal-clear waters among vibrant coral reefs, then relax on Nungwi Beach, known for its soft white sand and laid-back atmosphere. As the afternoon winds down, board a traditional dhow for a magical sunset cruise along Zanzibar's coastline before returning to your hotel.</p>`,
+        },
+        "day2-5": {
+          title: "Day 2: Spice Farm, Prison Island & Stone Town",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Discover Zanzibar's famous spices on a guided Spice Farm tour, with fresh fruit tasting along the way. Continue to Prison Island by boat to meet the giant Aldabra tortoises and learn about the island's history. End the day with a Stone Town Walking Tour through the Old Fort, House of Wonders, local markets, and the narrow historic streets of this UNESCO World Heritage Site.</p>`,
+        },
+        "day3-5": {
+          title: "Day 3: Jozani Forest, Salaam Cave, Mtende Beach & The Rock",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Visit Jozani Forest to spot the rare Zanzibar Red Colobus Monkeys along a peaceful mangrove boardwalk. Continue to Salaam Cave for a swim in crystal-clear natural water and a chance to meet friendly sea turtles. Relax on the stunning white sands of Mtende Beach, one of Zanzibar's most beautiful stretches of coastline, before finishing at the iconic The Rock Restaurant for spectacular ocean views.</p>`,
+        },
+        "day1-4": {
+          title:
+            "Day 1: Spice Farm, Prison Island, Nakupenda Sandbank, Stone Town & Night Food Market",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Start with a visit to a Spice Farm to learn about Zanzibar's famous spices, then head to Prison Island to meet the giant tortoises. Relax and swim at the beautiful Nakupenda Sandbank before exploring the history and culture of Stone Town. Wrap up the day with local food and lively atmosphere at the Stone Town Night Food Market.</p>`,
+        },
+        "day2-4": {
+          title:
+            "Day 2: Mnemba Island, Sea Turtles, Kendwa Beach & Sunset Cruise",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Enjoy a snorkeling and marine life experience at Mnemba Island, then visit the sea turtles for a swim alongside them. Relax at Kendwa Beach, one of Zanzibar's most scenic stretches of coastline, and end the day with a beautiful sunset cruise along the coast.</p>`,
+        },
+        "day1-3": {
+          title: "Day 1: Jozani Forest + Salaam Cave + The Rock",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Start your Zanzibar journey by exploring the beautiful Jozani Forest, home to the rare Zanzibar Red Colobus Monkeys and a peaceful mangrove boardwalk. Continue to the stunning Salaam Cave, where you can swim in crystal-clear natural water, relax in a peaceful setting, and even feed friendly turtles. End the day at the iconic The Rock Restaurant, one of Zanzibar's most famous landmarks, where you can enjoy breathtaking ocean views and capture unforgettable photos while tasting delicious seafood (meal optional).</p>`,
+        },
+        "day2-3": {
+          title: "Day 2: Mnemba Island - Swimming with Dolphins",
+          meta: "Duration: full day | Pick-up: 8:30 AM",
+          desc: `<p>Enjoy an unforgettable ocean experience at Mnemba Island, one of Zanzibar's top snorkeling destinations. Start the day with the chance to see and swim alongside wild dolphins in their natural habitat. Continue with snorkeling in the crystal-clear turquoise waters, where you'll discover colorful coral reefs and tropical fish. Relax on the beautiful sandbank (tide permitting), swim in the warm Indian Ocean, and enjoy fresh tropical fruits before returning to your hotel.</p>`,
+        },
+        "day3-3": {
+          title: "Day 3: Spice Farm + Prison Island + Stone Town",
+          meta: "Duration: full day | Pick-up: 9:00 AM",
+          desc: `<p>Experience the rich culture and history of Zanzibar on this full-day tour. Begin at the Spice Farm, where you'll discover why Zanzibar is known as the "Spice Island" by seeing, smelling, and tasting fresh tropical spices and fruits. Next, take a boat trip to Prison Island to meet the famous giant Aldabra tortoises and learn about the island's fascinating history. End your journey with a guided Stone Town Walking Tour, exploring narrow streets, historic buildings, local markets, and the vibrant culture of Zanzibar's UNESCO World Heritage Site.</p>`,
+        },
+        mikumi: {
+          title: "Mikumi National Park Safari",
+          meta: "Duration: full day | Flight departs: 06:30 or 07:00",
+          desc: `<p>Fly from Zanzibar direct to Mikumi, where you'll meet your safari guide at the park for a short briefing before setting off. The morning safari begins at 07:20, followed by a lunch break at 12:30 and an afternoon safari at 13:30. The return flight to Zanzibar departs at 15:00, arriving back around 15:45.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Flight round trip</li>
+                            <li><i class="fas fa-check-circle"></i> Entrance fees</li>
+                            <li><i class="fas fa-check-circle"></i> Open jeep</li>
+                            <li><i class="fas fa-check-circle"></i> Lunch and soft drinks</li>
+                        </ul>`,
+        },
+      };
+
+      // =============================================
+      // PACKAGE MODAL
+      // =============================================
+      const packageModal = document.getElementById("packageModal");
+      const packageModalBody = document.getElementById("packageModalBody");
+      const packageModalClose = document.getElementById("packageModalClose");
+      const whatsappNumber = "255615311661";
+
+      document.querySelectorAll(".package-more").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const key = btn.getAttribute("data-package");
+          const data = packageData[key];
+          if (!data) return;
+
+          let extraImagesHtml = "";
+          const extraNums =
+            (window.siteConfig &&
+              window.siteConfig.extraImages &&
+              window.siteConfig.extraImages[key]) ||
+            [];
+          if (extraNums.length > 0) {
+            extraImagesHtml = `
+                            <div class="modal-extra-images">
+                                <h4><i class="fas fa-images"></i> More from this experience</h4>
+                                <div class="extra-images-scroll">
+                                    ${extraNums.map((n) => `<img src="./images/${n}.jpg" alt="Extra view" loading="lazy" />`).join("")}
+                                </div>
+                            </div>
+                        `;
+          }
+
+          const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%20Acheda%20Zanzibar%20Tours%2C%20I'm%20interested%20in%20the%20package%3A%20${encodeURIComponent(data.title)}`;
+
+          packageModalBody.innerHTML = `
+                        <h2>${data.title}</h2>
+                        <div class="package-meta"><i class="far fa-clock"></i> ${data.meta}</div>
+                        <div class="package-full-desc">${data.desc}</div>
+                        <div class="package-inclusive-note">
+                            <i class="fas fa-gem"></i> <strong>One-time payment covers everything:</strong> transport, meals, entry fees, and expert guide – no hidden costs!
+                        </div>
+                        ${extraImagesHtml}
+                        <a href="${whatsappLink}" target="_blank" class="modal-whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Book Now via WhatsApp
+                        </a>
+                    `;
+
+          packageModal.classList.add("active");
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      packageModalClose.addEventListener("click", () => {
+        packageModal.classList.remove("active");
+        document.body.style.overflow = "";
+      });
+      packageModal
+        .querySelector(".modal-overlay")
+        .addEventListener("click", () => {
+          packageModal.classList.remove("active");
+          document.body.style.overflow = "";
+        });
+
+      // =============================================
+      // CONTACT FORM
+      // =============================================
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Thank you for your message! We will get back to you soon.");
+        e.target.reset();
+      });
+
+      // =============================================
+      // GOOGLE TRANSLATE - WORKING IMPLEMENTATION
+      // =============================================
+      const gtBarWrapper = document.getElementById("gtBarWrapper");
+      const gtLangLabel = document.getElementById("gtLangLabel");
+      const gtCloseBtn = document.getElementById("gtCloseBtn");
+      const translateBtn = document.getElementById("translateBtn");
+      const translateDropdown = document.getElementById("translateDropdown");
+      const langButtons = translateDropdown.querySelectorAll("button");
+
+      // Language names for display
+      const langNames = {
+        en: "English",
+        fr: "Français",
+        de: "Deutsch",
+      };
+
+      // Current language (default: en)
+      let currentLang = "en";
+
+      // Function to show the Google Translate bar
+      function showTranslateBar(lang) {
+        // Set the language label
+        gtLangLabel.textContent = langNames[lang] || "English";
+        // Show the bar
+        gtBarWrapper.classList.add("active");
+        // Scroll to top to show the bar
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Function to hide the Google Translate bar
+      function hideTranslateBar() {
+        gtBarWrapper.classList.remove("active");
+        // Reset to English
+        switchLanguage("en");
+      }
+
+      // Function to trigger Google Translate via cookie (most reliable method)
+      function switchLanguage(lang) {
+        // Set the cookie for Google Translate
+        // googtrans = /en/fr  or /en/de  or /en/en (for original)
+        let cookieValue = "";
+        if (lang === "en") {
+          cookieValue = ""; // empty = original
+        } else {
+          cookieValue = "/en/" + lang;
+        }
+        document.cookie = "googtrans=" + cookieValue + "; path=/";
+        // Also set the domain cookie for better compatibility
+        document.cookie =
+          "googtrans=" +
+          cookieValue +
+          "; path=/; domain=" +
+          window.location.hostname;
+
+        // Reload the page to apply translation
+        window.location.reload();
+      }
+
+      // On page load, check if translation is active
+      function checkTranslationStatus() {
+        const cookies = document.cookie.split(";");
+        let foundLang = "en";
+        cookies.forEach((c) => {
+          if (c.trim().startsWith("googtrans=")) {
+            const val = c.split("=")[1];
+            if (val && val.startsWith("/en/")) {
+              const parts = val.split("/");
+              if (parts.length >= 3) {
+                foundLang = parts[2];
+              }
+            } else if (val === "") {
+              foundLang = "en";
+            }
+          }
+        });
+
+        // Update active state in dropdown
+        langButtons.forEach((b) => {
+          b.classList.toggle(
+            "active-lang",
+            b.getAttribute("data-lang") === foundLang,
+          );
+        });
+
+        // If translation is active (not English), show the bar
+        if (foundLang !== "en") {
+          currentLang = foundLang;
+          showTranslateBar(foundLang);
+        } else {
+          gtBarWrapper.classList.remove("active");
+        }
+
+        // Also check if Google Translate has been applied via other means
+        // Look for the .goog-te-banner-frame or .skiptranslate
+        setTimeout(() => {
+          const gtFrame = document.querySelector(".goog-te-banner-frame");
+          if (gtFrame && gtFrame.style.display !== "none") {
+            // Translation is active
+            if (currentLang === "en") {
+              // Try to detect language from the page
+              const htmlLang = document.documentElement.lang || "en";
+              if (htmlLang !== "en") {
+                currentLang = htmlLang;
+                showTranslateBar(htmlLang);
+                langButtons.forEach((b) => {
+                  b.classList.toggle(
+                    "active-lang",
+                    b.getAttribute("data-lang") === htmlLang,
+                  );
+                });
+              }
+            }
+          }
+        }, 1000);
+      }
+
+      // =============================================
+      // TRANSLATE BUTTON & DROPDOWN EVENTS
+      // =============================================
+
+      // Toggle dropdown on translate button click
+      translateBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        translateDropdown.classList.toggle("open");
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          !e.target.closest("#translateBtn") &&
+          !e.target.closest(".translate-dropdown")
+        ) {
+          translateDropdown.classList.remove("open");
+        }
+      });
+
+      // Language selection
+      langButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const lang = btn.getAttribute("data-lang");
+
+          // Update active state
+          langButtons.forEach((b) => b.classList.remove("active-lang"));
+          btn.classList.add("active-lang");
+
+          // Close dropdown
+          translateDropdown.classList.remove("open");
+
+          // If the language is English, hide the bar and reset
+          if (lang === "en") {
+            // Remove the cookie and reload to original
+            document.cookie =
+              "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            document.cookie =
+              "googtrans=; path=/; domain=" +
+              window.location.hostname +
+              "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            window.location.reload();
+            return;
+          }
+
+          // For other languages, trigger translation via cookie reload
+          switchLanguage(lang);
+        });
+      });
+
+      // Close bar button
+      gtCloseBtn.addEventListener("click", () => {
+        // Remove translation cookie and reload to English
+        document.cookie =
+          "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        document.cookie =
+          "googtrans=; path=/; domain=" +
+          window.location.hostname +
+          "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        window.location.reload();
+      });
+
+      // =============================================
+      // GOOGLE TRANSLATE INITIALIZATION
+      // =============================================
+      // This function is called by the Google Translate script
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,fr,de",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element",
+        );
+
+        // After init, check the translation status
+        setTimeout(checkTranslationStatus, 500);
+      }
+
+      // If the script loads but the function is not called, we call it manually
+      // But the script tag with the callback should handle it.
+
+      // Also check status after full page load
+      window.addEventListener("load", () => {
+        setTimeout(checkTranslationStatus, 1000);
+      });
+
+      // =============================================
+      // FALLBACK: Manual translation trigger
+      // =============================================
+      // Sometimes the cookie method doesn't work on first visit,
+      // so we also try to use the Google Translate dropdown programmatically
+      function triggerGoogleTranslate(lang) {
+        const select = document.querySelector(".goog-te-combo");
+        if (select) {
+          select.value = lang;
+          select.dispatchEvent(new Event("change"));
+          return true;
+        }
+        return false;
+      }
+
+      // If cookie method fails, we can try this as a fallback
+
+      console.log("Acheda Zanzibar Tours - Google Translate ready.");
+    </script>
+
+    <!-- =============================================
+GOOGLE TRANSLATE SCRIPT
+============================================= -->
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
