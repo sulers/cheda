@@ -664,7 +664,7 @@
           row.innerHTML = `
             <div class="pkg-label">${PACKAGE_LABELS[key] || key}</div>
             <div class="thumb-slot">
-                <img class="thumb" id="cardThumb-${key}" src="./images/${cardNum}.jpg" alt="Card image" />
+                <img class="thumb" id="cardThumb-${key}" src="./images/${cardNum}.jpeg" alt="Card image" />
                 <div class="thumb-caption">Card photo</div>
                 <button class="btn btn-outline" style="margin-top:6px;" data-action="pick-card" data-key="${key}">Change</button>
             </div>
@@ -673,7 +673,7 @@
                 ? `
             <div class="thumb-slot">
                 <div class="extra-thumbs" id="extraThumbs-${key}">
-                    ${extraNums.map((n) => `<img class="thumb" src="./images/${n}.jpg" alt="Extra image" />`).join("")}
+                    ${extraNums.map((n) => `<img class="thumb" src="./images/${n}.jpeg" alt="Extra image" />`).join("")}
                 </div>
                 <div class="thumb-caption">Extra photos (popup)</div>
                 <button class="btn btn-outline" style="margin-top:6px;" data-action="pick-extra" data-key="${key}">Edit</button>
@@ -801,13 +801,13 @@
           cell.className = "picker-cell" + (selected.has(n) ? " selected" : "");
           cell.dataset.num = n;
           cell.innerHTML = `
-            <img src="./images/${n}.jpg" alt="Image ${n}" loading="lazy" />
+            <img src="./images/${n}.jpeg" alt="Image ${n}" loading="lazy" />
             <span class="num-badge">${n}</span>
             <span class="zoom-icon" data-zoom="${n}"><i class="fas fa-expand"></i></span>
         `;
           cell.addEventListener("click", (e) => {
             if (e.target.closest("[data-zoom]")) {
-              openLightbox(`./images/${n}.jpg`);
+              openLightbox(`./images/${n}.jpeg`);
               return;
             }
             if (pickerState.mode === "single") {
@@ -840,7 +840,7 @@
           if (n) {
             workingConfig.images[key] = n;
             document.getElementById(`cardThumb-${key}`).src =
-              `./images/${n}.jpg`;
+              `./images/${n}.jpeg`;
           }
         } else {
           const nums = [...selected];
@@ -848,7 +848,7 @@
           document.getElementById(`extraThumbs-${key}`).innerHTML = nums
             .map(
               (n) =>
-                `<img class="thumb" src="./images/${n}.jpg" alt="Extra image" />`,
+                `<img class="thumb" src="./images/${n}.jpeg" alt="Extra image" />`,
             )
             .join("");
         }
