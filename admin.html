@@ -373,6 +373,9 @@
         border-radius: 8px;
         overflow: hidden;
         border: 3px solid transparent;
+        background: var(
+          --gray-100
+        ); /* placeholder so gaps aren't blank white */
       }
       .picker-cell.selected {
         border-color: var(--orange);
@@ -801,10 +804,10 @@
           cell.className = "picker-cell" + (selected.has(n) ? " selected" : "");
           cell.dataset.num = n;
           cell.innerHTML = `
-            <img src="./images/${n}.jpeg" alt="Image ${n}" loading="lazy" />
+            <img src="./images/${n}.jpeg" alt="Image ${n}" width="90" height="72" decoding="async" />
             <span class="num-badge">${n}</span>
             <span class="zoom-icon" data-zoom="${n}"><i class="fas fa-expand"></i></span>
-        `;
+          `;
           cell.addEventListener("click", (e) => {
             if (e.target.closest("[data-zoom]")) {
               openLightbox(`./images/${n}.jpeg`);
