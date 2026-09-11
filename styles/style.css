@@ -580,7 +580,7 @@ ul {
 
 .package-image {
   position: relative;
-  height: 200px;
+  height: 400px;
   overflow: hidden;
   flex-shrink: 0;
 }
